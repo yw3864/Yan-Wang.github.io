@@ -27,6 +27,10 @@
             max-width: 900px;
             margin: 0 auto;
         }
+        /* 调整各版块标题的上外边距，让板块更分明 */
+        h2 {
+            margin-top: 40px;
+        }
         .paper-title {
             margin: 0;
             font-size: 100%;
@@ -37,10 +41,11 @@
             border: none;
             cursor: pointer;
             font-weight: bold;
-            color: black;
-            padding: 0;
+            color: #007bff;
+            padding: 3px 0;
             font-size: 90%;
             display: inline-block;
+            margin-top: 5px;
         }
         .accordion::before {
             content: "[+] ";
@@ -52,12 +57,15 @@
         }
         .panel {
             background-color: #F1F1F1;
-            color: black;
+            color: #666;
             padding: 10px;
             display: none;
+            margin-top: 5px;
         }
-        hr {
-            margin: 40px 0;
+        /* 为合作者链接设置与标题区分的样式（不加粗且颜色略不同） */
+        a.collab-link {
+            color: #0056b3;
+            font-weight: normal;
         }
     </style>
 </head>
@@ -67,6 +75,30 @@
         <header>
             <h1>Yan Wang</h1>
             <p>Ph.D. Candidate in Economics<br>American University</p>
+            
+            <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
+            <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
+            <h3><a href="">CV</a></h3>  
+            <h3><a href="">Projects</a></h3>  
+            <h3><a href="">Teaching</a></h3> 
+            <h3><a href="">Code</a></h3> 
+            <h3><a href="">Personal</a></h3>
+            
+            <b>Social</b><br>
+            <div class="social-row">
+                <a href="mailto:yw3864a@american.edu" class="author-social" target="_blank">
+                    <i class="fa fa-envelope-square"></i> Email
+                </a>
+                <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
+                    <i class="ai ai-google-scholar"></i> Scholar
+                </a>
+                <a href="https://github.com/yw3864">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <br>
+
+            <p><b>Contact:</b><br>Department of Economics<br>American University<br>4400 Massachusetts Ave NW, Washington, DC 20016</p>
         </header>
 
         <section>
@@ -75,30 +107,43 @@
 
             <p class="paper-title">
                 <a href="https://github.com/yw3864/Yan-Wang.github.io/blob/master/research/Macro-criticality%20of%20climate%20change_synthesis_paper.pdf">
-                    Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda
+                    Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda1
                 </a><br>
-                with <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz">Nepomuk Dunz</a> and <a href="https://blogs.worldbank.org/en/team/c/christian-schoder">Christian Schoder</a><br>
-                <i>Submitted to The World Bank Research Observer</i>, February 12, 2025 (<a href="https://academic.oup.com/wbro">Link</a>)
+                with <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz" class="collab-link">Nepomuk Dunz</a> and 
+                <a href="https://blogs.worldbank.org/en/team/c/christian-schoder" class="collab-link">Christian Schoder</a>
             </p>
+            <i>Submitted to The World Bank Research Observer</i>, February 12, 2025 
+            (<a href="https://academic.oup.com/wbro">Link</a>)
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
-                <p>The assessment of climate-related economic impacts and the formulation of effective policies present significant analytical challenges. This paper explores these challenges by examining the socio-economic system's key characteristics, such as uncertainty, nonlinear shock transmission, and socio-economic tipping points, which are essential for evaluating climate impacts and devising decarbonization strategies.</p>
+                <p>
+                Abstract: The assessment of climate-related economic impacts and the formulation of effective policies present significant analytical challenges. This paper explores these challenges by examining the socio-economic system's key characteristics, such as uncertainty, nonlinear shock transmission, and socio-economic tipping points, which are essential for evaluating climate impacts and devising decarbonization strategies. The study identifies the most pertinent avenues for improving diagnostic and analytical tools used in the macroeconomic evaluation of the physical impacts of climate change, as well as the risks and opportunities associated with low-carbon transition policies. Furthermore, it advocates for a collaborative approach to integrate these insights into global development strategies. These findings aim to support policymakers in addressing climate challenges and promoting sustainable development.
+                </p>
             </div>
+
             <hr>
 
             <p class="paper-title">
                 <a href="https://www.nber.org/papers/w33485">
                     Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
                 </a><br>
-                with <a href="https://siepr.stanford.edu/people/steven-davis">Steven J. Davis</a>, <a href="https://www.american.edu/cas/faculty/dl5165a.cfm">Dingqian Liu</a>, and <a href="https://www.american.edu/cas/faculty/sheng.cfm">Xuguang Simon Sheng</a><br>
-                <i>Hoover Institution Economics Working Paper 25102</i> (<a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic">Link</a>), 
-                NBER Working Paper 33485, DOI: 10.3386/w33485, Issue Date: February 2025 (<a href="https://www.nber.org/papers/w33485">Link</a>)
+                with <a href="https://siepr.stanford.edu/people/steven-davis" class="collab-link">Steven J. Davis</a>, 
+                <a href="https://www.american.edu/cas/faculty/dl5165a.cfm" class="collab-link">Dingqian Liu</a>, and 
+                <a href="https://www.american.edu/cas/faculty/sheng.cfm" class="collab-link">Xuguang Simon Sheng</a>
             </p>
+            <i>Hoover Institution Economics Working Paper 25102</i> 
+            (<a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic">Link</a>), 
+            NBER Working Paper 33485, DOI: 10.3386/w33485, Issue Date: February 2025 
+            (<a href="https://www.nber.org/papers/w33485">Link</a>)
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
-                <p>China’s stock market greatly outperformed other national markets during the first several months of the COVID-19 pandemic, even before it became evident that early containment efforts would flounder in the United States and other countries. This study evaluates policy interventions and their effects on stock volatility and price levels.</p>
+                <p>
+                Abstract: China’s stock market greatly outperformed other national markets during the first several months of the COVID-19 pandemic, and it did so even before it became evident that early containment efforts would flounder in the United States and many other countries. As to why, one view holds that aggressive monetary and credit easing propped up Chinese equity values. To assess this view, we consider several interventions that eased monetary and credit conditions in the first six months of 2020. Our analysis finds clear evidence that these interventions raised implied stock market volatility but little evidence that they influenced stock price levels. We also consider policy actions that restricted short selling, limited stock sales, and boosted stock purchases. These efforts to raise net equity demand were small in scale and highly time-limited, as we discuss, suggesting that any direct effects on stock prices were also modest. Neither our study nor other work known to us provides a ready explanation for the extraordinary performance of China’s stock market in the first half of 2020. This performance is even more striking in hindsight, given later developments in China’s economy and stock market.
+                </p>
             </div>
+        </section>
 
+        <section>
             <h2>Published &amp; Forthcoming Papers</h2>
             <hr>
 
@@ -106,23 +151,65 @@
                 <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28">
                     An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up
                 </a><br>
-                with Liping Li, Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen<br>
-                <i>The Eighteenth International Conference on Management Science and Engineering Management</i>, First Online: August 4, 2024 (<a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28">Link</a>)
+                with <a style="color: #0056b3; font-weight: normal;" href="#">Liping Li</a>, 
+                Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen
             </p>
+            <i>The Eighteenth International Conference on Management Science and Engineering Management</i>, 
+            First Online: August 4, 2024 (<a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28">Link</a>)
+            <br>
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
-                <p>This study develops an evolutionary game theory model to analyze technology catching-up strategies for Chinese laggard firms.</p>
+                <p>
+                Abstract: In order to keep the sustainable global developing steps and improve the innovation ability in open innovation platforms, sustainable technology catching up is indispensable in China. However, sometimes the international technology catching up paths, such as international import, FDI, and strategic alliances may not play so significant effect for laggard firms in China at their early stage of catching up on account of their weak absorptive capacity, insufficient complementary assets, and far geographical distance from advanced technologies. Therefore, how do these laggard firms expedite their early-stage sustainable technology catching up availably? Based on the extant paths, from the perspective of open innovation, we put forward a new path named learning-by-technology learning intermediary firms to help those laggard firms improve their technology catching up process and build an evolutionary economics model to capture the evolution process of this system. We gave out the technology learning intermediary firms play different roles such as technology pursuers, technology innovators, and technology transfers at different stages during the laggard firms technology catching up process.
+                </p>
             </div>
+        </section>
 
+        <section>
             <h2>Macro-Financial Review</h2>
             <hr>
             <p class="paper-title"><strong>Macro-Financial Review</strong></p>
-            <p>As a core member of the Macro-Financial Review team, co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG). <a href="https://raw.githubusercontent.com/yw3864/Yan-Wang.github.io/main/macro_financial_review_cover.png" target="_blank">[View Cover]</a></p>
+            <p>
+                As a core member of the Macro-Financial Review team under the leadership of 
+                <a href="https://blogs.worldbank.org/en/team/n/norbert-fiess" class="collab-link">Norbert Fiess</a> and 
+                <a href="https://blogs.worldbank.org/en/team/e/erik-feyen" class="collab-link">Erik Feyen</a>, 
+                co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the 
+                World Bank Group (WBG).
+            </p>
+
             <ul>
                 <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
                 <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).</li>
             </ul>
+
+            <!-- 封面图片示例：点击可在新标签打开大图，也可加文字链接 -->
+            <p>
+                <a href="images/Macro-Financial-Review.png" target="_blank">
+                    <img src="images/Macro-Financial-Review.png" alt="Macro-Financial Review Cover" width="200">
+                </a>
+                <br>
+                <a href="images/Macro-Financial-Review.png" target="_blank">View Cover</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Works in Progress</h2>
+            <hr>
+            <p>Currently no works in progress listed.</p>
         </section>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var acc = document.getElementsByClassName("accordion");
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    panel.style.display = panel.style.display === "block" ? "none" : "block";
+                });
+            }
+        });
+    </script>
 </body>
 </html>
