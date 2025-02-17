@@ -27,10 +27,10 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        .paper-title {
-            margin: 0;
-            font-size: 100%;
-            font-weight: bold;
+        .social-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .accordion {
             background-color: transparent;
@@ -38,10 +38,8 @@
             cursor: pointer;
             font-weight: bold;
             color: #007bff;
-            padding: 3px 0;
-            font-size: 90%;
-            display: inline-block;
-            margin-top: 5px;
+            padding: 5px;
+            text-align: left;
         }
         .accordion::before {
             content: "[+] ";
@@ -56,7 +54,7 @@
             color: #666;
             padding: 10px;
             display: none;
-            margin-top: 5px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -86,50 +84,70 @@
             <p><b>Contact:</b><br>Department of Economics<br>American University<br>4400 Massachusetts Ave NW, Washington, DC 20016</p>
         </header>
 
-     </head>
-<body>
-    <h2>Working Papers</h2>
-    <hr>
-    
-    <p><a href="https://github.com/yw3864/Yan-Wang.github.io/blob/master/research/Macro-criticality%20of%20climate%20change_synthesis_paper.pdf" style="font-weight:bold;">Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda</a><br>
-    with <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz">Nepomuk Dunz</a> and <a href="https://blogs.worldbank.org/en/team/c/christian-schoder">Christian Schoder</a><br>
-    Submitted to <i>The World Bank Research Observer</i>, February 12, 2025 (<a href="https://academic.oup.com/wbro">link</a>).</p>
-    <button class="accordion">Abstract</button>
-    <div class="panel">
-        <p>The assessment of climate-related economic impacts and the formulation of effective policies...</p>
+        <section>
+            <h2>Working Papers</h2>
+            <hr>
+
+            <p style="margin:0; margin-bottom: 5px;">
+                <a href="https://github.com/yw3864/Yan-Wang.github.io/blob/master/research/Macro-criticality%20of%20climate%20change_synthesis_paper.pdf"><strong>Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda</strong></a>
+                <br> with <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz">Nepomuk Dunz</a> and <a href="https://blogs.worldbank.org/en/team/c/christian-schoder">Christian Schoder</a>
+                <br><i>Submitted to The World Bank Research Observer</i>, February 12, 2025 (<a href="https://academic.oup.com/wbro">Link</a>)
+            </p>
+
+            <button class="accordion">Abstract</button>
+            <div class="panel">
+                <p>Climate-related economic impacts present significant analytical challenges. This paper explores the socio-economic system's key characteristics such as uncertainty, nonlinear shock transmission, and socio-economic tipping points.</p>
+            </div>
+
+            <hr>
+
+            <p style="margin:0; margin-bottom: 5px;">
+                <a href="https://www.nber.org/papers/w33485"><strong>Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic</strong></a>
+                <br> with <a href="https://siepr.stanford.edu/people/steven-davis">Steven J. Davis</a>, <a href="https://www.american.edu/cas/faculty/dl5165a.cfm">Dingqian Liu</a>, and <a href="https://www.american.edu/cas/faculty/sheng.cfm">Xuguang Simon Sheng</a>
+                <br><i>Hoover Institution Economics Working Paper 25102</i> (<a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic">Link</a>), NBER Working Paper 33485, DOI: <a href="https://doi.org/10.3386/w33485">10.3386/w33485</a>, Issue Date: February 2025
+            </p>
+
+            <button class="accordion">Abstract</button>
+            <div class="panel">
+                <p>China’s stock market greatly outperformed other national markets during early COVID-19. This study evaluates policy interventions and their effects on stock volatility and price levels.</p>
+            </div>
+
+            <h2 style="margin-top: 40px;">Published &amp; Forthcoming Papers</h2>
+            <hr>
+
+            <p style="margin:0; margin-bottom: 5px;">
+                <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28"><strong>An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up</strong></a>
+                <br> with Liping Li, Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen
+                <br><i>The Eighteenth International Conference on Management Science and Engineering Management</i>, August 4, 2024
+            </p>
+
+            <button class="accordion">Abstract</button>
+            <div class="panel">
+                <p>This study develops an evolutionary game theory model to analyze technology catching-up strategies for Chinese laggard firms.</p>
+            </div>
+
+            <h2 style="margin-top: 40px;">Works in Progress</h2>
+            <hr>
+
+            <p style="margin:0; margin-bottom: 5px;">
+                <strong>Macro-Financial Review</strong> 
+                <br> As a core member of the Macro-Financial Review team under the leadership of <a href="https://blogs.worldbank.org/en/team/n/norbert-fiess">Norbert Fiess</a> and <a href="https://blogs.worldbank.org/en/team/e/erik-feyen">Erik Feyen</a>, co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG).
+                <br> <a href="images/Macro-Financial-Review.png" target="_blank">[View Cover]</a>
+            </p>
+        </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var acc = document.getElementsByClassName("accordion");
+                for (var i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+                    });
+                }
+            });
+        </script>
     </div>
-    
-    <p><a href="https://www.nber.org/papers/w33485" style="font-weight:bold;">Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic</a><br>
-    with <a href="https://siepr.stanford.edu/people/steven-davis">Steven J. Davis</a>, <a href="https://www.american.edu/cas/faculty/dl5165a.cfm">Dingqian Liu</a>, and <a href="https://www.american.edu/cas/faculty/sheng.cfm">Xuguang Simon Sheng</a><br>
-    <i>Stanford University, Hoover Institution Economics Working Paper 25102</i> and <i>NBER Working Paper 33485</i>, Issue Date: February 2025 (<a href="https://www.nber.org/papers/w33485">link</a>).</p>
-    <button class="accordion">Abstract</button>
-    <div class="panel">
-        <p>China’s stock market greatly outperformed other national markets...</p>
-    </div>
-    
-    <h2>Published & Forthcoming Papers</h2>
-    <hr>
-    
-    <p><a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" style="font-weight:bold;">An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up</a><br>
-    with Liping Li, Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen<br>
-    Conference paper, <i>The Eighteenth International Conference on Management Science and Engineering Management</i> (First Online: August 4, 2024) (<a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28">link</a>).</p>
-    <button class="accordion">Abstract</button>
-    <div class="panel">
-        <p>In order to keep the sustainable global developing steps and improve innovation ability...</p>
-    </div>
-    
-    <h2>Macro-Financial Review</h2>
-    <hr>
-    <p><strong>Macro-Financial Review</strong><br>
-    As a core member of the Macro-Financial Review team under the leadership of <a href="https://blogs.worldbank.org/en/team/n/norbert-fiess">Norbert Fiess</a> and <a href="https://blogs.worldbank.org/en/team/e/erik-feyen">Erik Feyen</a>, co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG), covering macro-financial risks across multiple countries. [<a href="images/Macro-Financial-Review.png" target="_blank">View Cover</a>]</p>
-    
-    <ul>
-        <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
-        <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).</li>
-    </ul>
-    
-    <h2>Works in Progress</h2>
-    <hr>
-    <p>To be added.</p>
 </body>
 </html>
