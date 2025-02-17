@@ -27,14 +27,23 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        /* 让各小标题间距适度 */
+        /* 将板块标题间距调小一些 */
         h2 {
-            margin-top: 25px;  /* 可根据需要自行调整 */
+            margin-top: 15px;     /* 原先 25px -> 改小以减少上下距离 */
+            margin-bottom: 5px;  /* 调整下边距使标题与hr更紧凑 */
+        }
+        /* 调整 hr 与前后内容的间距 */
+        hr {
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
         .paper-title {
             margin: 0;
             font-size: 100%;
             font-weight: bold;
+        }
+        .paper-title .title-blue {
+            color: #007bff;  /* 与原链接相同的蓝色 */
         }
         .accordion {
             background-color: transparent;
@@ -62,7 +71,7 @@
             display: none;
             margin-top: 5px;
         }
-        /* 合作者链接：区别于文章标题 */
+        /* 合作者链接：普通蓝色且非加粗 */
         a.collab-link {
             color: #0056b3;
             font-weight: normal;
@@ -108,9 +117,7 @@
 
             <!-- Paper 1: Climate Change Synthesis -->
             <p class="paper-title">
-                <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EUtC70e7bA1AsAEL1wNqH8oBrZr03lMndGrBAd303sKFAg?e=CPrfXx" target="_blank">
-                    Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda1
-                </a><br>
+                <span class="title-blue">Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda1</span><br>
                 with <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz" class="collab-link" target="_blank">Nepomuk Dunz</a> and 
                 <a href="https://blogs.worldbank.org/en/team/c/christian-schoder" class="collab-link" target="_blank">Christian Schoder</a>
             </p>
@@ -128,9 +135,7 @@
 
             <!-- Paper 2: Policy Interventions -->
             <p class="paper-title">
-                <a href="https://www.nber.org/papers/w33485" target="_blank">
-                    Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
-                </a><br>
+                <span class="title-blue">Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic</span><br>
                 with <a href="https://siepr.stanford.edu/people/steven-davis" class="collab-link" target="_blank">Steven J. Davis</a>, 
                 <a href="https://www.american.edu/cas/faculty/dl5165a.cfm" class="collab-link" target="_blank">Dingqian Liu</a>, and 
                 <a href="https://www.american.edu/cas/faculty/sheng.cfm" class="collab-link" target="_blank">Xuguang Simon Sheng</a>
@@ -154,16 +159,13 @@
             <hr>
 
             <p class="paper-title">
-                <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" target="_blank">
-                    An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up
-                </a><br>
-                with <a style="color: #0056b3; font-weight: normal;" href="https://scholar.google.com/" target="_blank">Liping Li</a>, 
+                <span class="title-blue">An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up</span><br>
+                with <a href="https://scholar.google.com/" class="collab-link" target="_blank" style="color: #0056b3;">Liping Li</a>,
                 Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen
             </p>
             <i>The Eighteenth International Conference on Management Science and Engineering Management</i>,
             First Online: August 4, 2024
             ( <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" target="_blank">Link</a> )
-            <br>
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
@@ -178,9 +180,7 @@
             <h2>Macro-Financial Review</h2>
             <hr>
             <p class="paper-title">
-                <a href="#" target="_blank">
-                    Macro-Financial Review
-                </a>
+                <span class="title-blue">Macro-Financial Review</span>
             </p>
             <p>
                 As a core member of the <strong>Macro-Financial Review</strong> team under the leadership of 
@@ -188,7 +188,7 @@
                 <a href="https://blogs.worldbank.org/en/team/e/erik-feyen" class="collab-link" target="_blank">Erik Feyen</a>,
                 co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the
                 World Bank Group (WBG).
-                ( <a href="https://raw.githubusercontent.com/yw3864/Yan-Wang.github.io/master/Macro%20Financial%20Review%20image.png" target="_blank">View Cover</a> )
+                ( <a href="https://american0-my.sharepoint.com/:i:/g/personal/yw3864a_american_edu/EfhFm-3FSQ5Ns36Ifrt4-IYBdRENGb1r4K_XMe1GHp1Z4A?e=euzSsp" target="_blank">View Cover</a> )
             </p>
             <ul>
                 <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
@@ -201,12 +201,11 @@
             <h2>Works in Progress</h2>
             <hr>
 
-            <!-- 1. Financial Crises and Climate Shocks ... (User's own article, no name/date) -->
+            <!-- 1. Financial Crises and Climate Shocks ... (no name, no date) -->
             <p class="paper-title">
-                <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EavgWBYvxI9BtycqNGUrNp4Bq14p7p13WeVzLS4o1RXhvg?e=rFWgbL" target="_blank">
-                    Financial Crises and Climate Shocks during the Great Depression: A DSGE Perspective
-                </a>
+                <span class="title-blue">Financial Crises and Climate Shocks during the Great Depression: A DSGE Perspective</span>
             </p>
+            ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EavgWBYvxI9BtycqNGUrNp4Bq14p7p13WeVzLS4o1RXhvg?e=rFWgbL" target="_blank">Link</a> )
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
@@ -217,15 +216,14 @@
 
             <hr>
 
-            <!-- 2. The Nonlinear Impact of ESG ... -->
+            <!-- 2. The Nonlinear Impact of ESG ... (with Ralph Sonenshine) -->
             <p class="paper-title">
-                <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/Ee3O0hiOGfNFmkedniNqBFgBBg_tRuRY472b47wpMDWUPA?e=ds7f71" target="_blank">
-                    The Nonlinear Impact of ESG on Stock Market Performance among U.S. Manufacturing and Banking Firms
-                </a><br>
+                <span class="title-blue">The Nonlinear Impact of ESG on Stock Market Performance among U.S. Manufacturing and Banking Firms</span><br>
                 with <a href="https://www.american.edu/cas/faculty/sonenshi.cfm" class="collab-link" target="_blank">
                     Ralph Sonenshine
                 </a>
             </p>
+            ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/Ee3O0hiOGfNFmkedniNqBFgBBg_tRuRY472b47wpMDWUPA?e=ds7f71" target="_blank">Link</a> )
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
@@ -236,12 +234,11 @@
 
             <hr>
 
-            <!-- 3. Silver, Climate, and China’s Price Revolution (User's own article, no name/date) -->
+            <!-- 3. Silver, Climate, and China’s Price Revolution (no name, no date) -->
             <p class="paper-title">
-                <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/ERNdwr73XStGmseB21nSxF4B2yJQNts4nK-FYWN6niqkkA?e=Afo5pM" target="_blank">
-                    Silver, Climate, and China’s Price Revolution
-                </a>
+                <span class="title-blue">Silver, Climate, and China’s Price Revolution</span>
             </p>
+            ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/ERNdwr73XStGmseB21nSxF4B2yJQNts4nK-FYWN6niqkkA?e=Afo5pM" target="_blank">Link</a> )
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
