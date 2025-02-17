@@ -1,174 +1,142 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Correct Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Yan Wang's website</title>
 
+    <!-- Styles and Fonts -->
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
-    <!-- Ensure Academicons is loaded properly -->
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-      }
-
-      h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-      }
-
-      .wrapper {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .accordion {
-        background-color: #f9f9f9;
-        color: #444;
-        cursor: pointer;
-        padding: 10px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 16px;
-        transition: 0.4s;
-      }
-
-      .panel {
-        padding: 0 18px;
-        display: none;
-        background-color: #F1F1F1;
-        overflow: hidden;
-      }
-
-      hr {
-        border: 0;
-        height: 1px;
-        background: #ccc;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .accordion {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            color: #007bff;
+            padding: 5px;
+            text-align: left;
+        }
+        .accordion::before {
+            content: "[+] ";
+            color: black;
+        }
+        .accordion.active::before {
+            content: "[-] ";
+            color: black;
+        }
+        .panel {
+            background-color: #F1F1F1;
+            color: #666;
+            padding: 10px;
+            display: none;
+            margin-bottom: 10px;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="wrapper">
-      <header>
-        <h1>Yan Wang</h1>
-        <p>Ph.D. Candidate in Economics<br>American University</p>
-        
-        <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
-        <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
-        <h3><a href="">CV</a></h3>  
-        <h3><a href="">Projects</a></h3>  
-        <h3><a href="">Teaching</a></h3> 
-        <h3><a href="">Code</a></h3> 
-        <h3><a href="">Personal</a></h3>
-        
-        <b>Social</b><br>
-        <div class="social-row">
-            <a href="mailto:yw3864a@american.edu" class="author-social" target="_blank">
-              <i class="fa fa-fw fa-envelope-square"></i> Email
-            </a>
-            <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
-              <i class="ai ai-google-scholar"></i> Scholar
-            </a>
-            <a href="https://github.com/yw3864">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-        </div>
-        <br>
+        <header>
+            <h1>Yan Wang</h1>
+            <p>Ph.D. Candidate in Economics<br>American University</p>
+            
+            <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
+            <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
+            <h3><a href="">CV</a></h3>  
+            <h3><a href="">Projects</a></h3>  
+            <h3><a href="">Teaching</a></h3> 
+            <h3><a href="">Code</a></h3> 
+            <h3><a href="">Personal</a></h3>
+            
+            <b>Social</b><br>
+            <div class="social-row">
+                <a href="mailto:yw3864a@american.edu" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+                <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
+                <a href="https://github.com/yw3864"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <br>
 
-        <p><b>Contact:</b><br>Department of Economics<br>American University<br>4400 Massachusetts Ave NW, Washington, DC 20016</p>
-      </header>
+            <p><b>Contact:</b><br>Department of Economics<br>American University<br>4400 Massachusetts Ave NW, Washington, DC 20016</p>
+        </header>
 
-      <section>
-        <h2>Working Papers</h2>
-        <hr>
+        <section>
+            <h2>Working Papers</h2>
+            <hr>
 
-        <p>
-            <a href="https://github.com/yw3864/Yan-Wang.github.io/blob/master/research/Macro-criticality%20of%20climate%20change_synthesis_paper.pdf">
-                Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda
-            </a>
-            <br> with 
-            <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz">Nepomuk Dunz</a> and 
-            <a href="https://blogs.worldbank.org/en/team/c/christian-schoder">Christian Schoder</a>
-        </p>
+            <p>
+                <a href="https://github.com/yw3864/Yan-Wang.github.io/blob/master/research/Macro-criticality%20of%20climate%20change_synthesis_paper.pdf"><strong>Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda</strong></a>
+                <br> with <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz">Nepomuk Dunz</a> and <a href="https://blogs.worldbank.org/en/team/c/christian-schoder">Christian Schoder</a>
+                <br><i>Submitted to The World Bank Research Observer</i>, February 12, 2025 (<a href="https://academic.oup.com/wbro">Link</a>)
+            </p>
 
-        <button class="accordion">Abstract</button>
-        <div class="panel">
-            <p>The assessment of climate-related economic impacts and the formulation of effective policies...</p>
-        </div>
+            <button class="accordion">Abstract</button>
+            <div class="panel">
+                <p>Climate-related economic impacts present significant analytical challenges...</p>
+            </div>
 
-        <hr>
+            <hr>
 
-        <p>
-            <a href="https://www.nber.org/papers/w33485">
-                Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
-            </a>
-            <br> with 
-            <a href="https://siepr.stanford.edu/people/steven-davis">Steven J. Davis</a>, 
-            <a href="https://www.american.edu/cas/faculty/dl5165a.cfm">Dingqian Liu</a>, and 
-            <a href="https://www.american.edu/cas/faculty/sheng.cfm">Xuguang Simon Sheng</a>
-        </p>
+            <p>
+                <a href="https://www.nber.org/papers/w33485"><strong>Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic</strong></a>
+                <br> with <a href="https://siepr.stanford.edu/people/steven-davis">Steven J. Davis</a>, <a href="https://www.american.edu/cas/faculty/dl5165a.cfm">Dingqian Liu</a>, and <a href="https://www.american.edu/cas/faculty/sheng.cfm">Xuguang Simon Sheng</a>
+                <br><i>Hoover Institution Economics Working Paper 25102</i> (<a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic">Link</a>), NBER Working Paper 33485, DOI: <a href="https://doi.org/10.3386/w33485">10.3386/w33485</a>, Issue Date: February 2025
+            </p>
 
-        <button class="accordion">Abstract</button>
-        <div class="panel">
-            <p>China’s stock market greatly outperformed other national markets during the first several months...</p>
-        </div>
+            <button class="accordion">Abstract</button>
+            <div class="panel">
+                <p>China’s stock market greatly outperformed other national markets during early COVID-19...</p>
+            </div>
 
-        <h2>Works in Progress</h2>
-        <hr>
-        <p>Coming soon...</p>
+            <h2>Published &amp; Forthcoming Papers</h2>
+            <hr>
 
-        <h2>Published & Forthcoming Papers</h2>
-        <hr>
+            <h2>Works in Progress</h2>
+            <hr>
 
-        <p>
-            <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28">
-                An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up
-            </a>
-            <br> with Liping Li, Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen
-        </p>
+            <p>
+                <strong>Macro-Financial Review</strong> 
+                <br> As a core member of the Macro-Financial Review team under the leadership of <a href="https://blogs.worldbank.org/en/team/n/norbert-fiess">Norbert Fiess</a> and <a href="https://blogs.worldbank.org/en/team/e/erik-feyen">Erik Feyen</a>, co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG).
+                <br> <a href="images/Macro-Financial-Review.png" target="_blank">[View Cover]</a>
+            </p>
 
-        <button class="accordion">Abstract</button>
-        <div class="panel">
-            <p>In order to keep the sustainable global developing steps and improve the innovation ability...</p>
-        </div>
+            <ul>
+                <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
+                <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).</li>
+            </ul>
+        </section>
 
-        <h2>Macro-Financial Review</h2>
-        <hr>
-        <p>
-            <strong><a href="images/Macro-Financial-Review.png" target="_blank">Macro-Financial Review</a></strong>
-            <br> As a core member of the Macro-Financial Review team under the leadership of 
-            <a href="https://blogs.worldbank.org/en/team/n/norbert-fiess">Norbert Fiess</a> and 
-            <a href="https://blogs.worldbank.org/en/team/e/erik-feyen">Erik Feyen</a>, co-authored sections of the 
-            <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG).
-        </p>
-      </section>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var acc = document.getElementsByClassName("accordion");
-            for (var i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    panel.style.display = (panel.style.display === "block") ? "none" : "block";
-                });
-            }
-        });
-      </script>
-  </body>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var acc = document.getElementsByClassName("accordion");
+                for (var i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+                    });
+                }
+            });
+        </script>
+    </div>
+</body>
 </html>
