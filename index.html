@@ -50,7 +50,8 @@
       .two-column {
         display: flex;
         justify-content: space-between;
-        margin-top: 30px;
+        /* 原来的 margin-top: 30px; 修改为负数，使其上移 */
+        margin-top: -30px;
       }
 
       .two-column .column {
@@ -78,6 +79,69 @@
       .education-list li span {
         display: block;
       }
+
+      /* 针对 papers-section 内部的 h2 只做小幅调整 */
+      .papers-section h2 {
+        margin: 1px 0;
+      }
+
+      /* 文章组样式：内部 p 标签无外边距 */
+      .article-group p {
+        margin: 0;
+      }
+      /* 每个文章组之间仅留1em空白 */
+      .article-group {
+        margin-bottom: 1em;
+      }
+      /* 文章标题 */
+      .paper-title {
+        font-size: 100%;
+        font-weight: bold;
+      }
+      /* Accordion 手风琴折叠 */
+      button.accordion {
+        background-color: #f8f8f8;
+        font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 100%;
+        margin-top: 3px;
+        color: #000;
+        transition: 0.3s;
+      }
+      button.accordion:hover {
+        background-color: #f8f8f8;
+      }
+      /* [ + ] / [ - ] 符号 */
+      button.accordion::before {
+        content: "[+] ";
+        color: #777;
+        font-size: 90%;
+        margin-right: 4px;
+      }
+      button.accordion.active::before {
+        content: "[-] ";
+      }
+      /* Accordion 内容默认隐藏，显示时添加 .show */
+      .panel {
+        background-color: #fff;
+        color: #666;
+        padding: 10px;
+        display: none;
+        margin-top: 3px;
+        font-size: 100%;
+      }
+      .panel.show {
+        display: block !important;
+      }
+      
+      /* 将 About Me 部分上移 */
+      .about-me {
+        margin-top: -20px;
+      }
     </style>
   </head>
 
@@ -94,7 +158,6 @@
         <h3><a href="">Teaching</a></h3> 
         <h3><a href="">Code</a></h3> 
         <h3><a href="">Personal</a></h3>
-        
         <style>
           .social-row a {
             display: inline-block;
@@ -130,7 +193,7 @@
       </section>
 
       <!-- About Me Section -->
-      <section>
+      <section class="about-me">
         <p>
           I am an economist specializing in macroeconomics, macro-finance, financial stability, and climate economics. 
           I am pursuing a Ph.D. in Economics at 
@@ -139,8 +202,7 @@
           <a href="https://www.worldbank.org/" target="_blank">World Bank Group</a>, 
           where I lead research on the macroeconomic impacts of climate change, develop diagnostic tools, 
           and contribute to global macro-financial risk assessment. Since May 2022, I have been involved in the 
-          <a href="https://www.policyuncertainty.com/china_epu.html" target="_blank">
-            China Economic Policy Uncertainty Project</a>, 
+          <a href="https://www.policyuncertainty.com/china_epu.html" target="_blank">China Economic Policy Uncertainty Project</a>, 
           applying NLP technology to manage data collection and analysis aimed at understanding economic policy uncertainty. 
           I hold an MPA from 
           <a href="https://www.sipa.columbia.edu/" target="_blank">Columbia University</a> 
