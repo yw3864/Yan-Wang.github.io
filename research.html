@@ -21,9 +21,9 @@
       line-height: 1.6;
       margin: 20px;
     }
-    /* 链接颜色 */
+    /* 链接颜色改为 #3399CC */
     a {
-      color: #007bff; 
+      color: #3399CC;
       text-decoration: none;
     }
     a:hover {
@@ -38,7 +38,7 @@
       max-width: 900px;
       margin: 0 auto;
     }
-    /* 板块标题和分割线贴近 */
+    /* 板块标题与分割线紧凑排列 */
     h2 {
       margin: 0;
       padding-top: 10px;
@@ -47,13 +47,15 @@
       margin: 0;
       margin-bottom: 5px;
     }
-    /* 文章标题与作者同一行、无空行 */
+
+    /* 文章标题 */
     .paper-title {
       margin: 0;
       font-size: 100%;
       font-weight: bold;
     }
-    /* 折叠按钮仿 Tyler Ransom */
+
+    /* Accordion手风琴折叠：仿Tyler Ransom */
     button.accordion {
       background-color: #f8f8f8;
       font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -70,7 +72,7 @@
     button.accordion:hover {
       background-color: #f8f8f8;
     }
-    /* 用 :before 显示 [ + ] 或 [ - ] 符号 */
+    /* 在按钮左侧显示[+]或[-]符号 */
     button.accordion::before {
       content: "[+] ";
       color: #777;
@@ -80,7 +82,7 @@
     button.accordion.active::before {
       content: "[-] ";
     }
-    /* panel 默认折叠；点击后切换 show */
+    /* 折叠面板默认不显示；点击按钮后添加show */
     .panel {
       background-color: #fff;
       color: #666;
@@ -100,12 +102,14 @@
     <header>
       <h1>Yan Wang</h1>
       <p>Ph.D. Candidate in Economics<br>American University</p>
+      
+      <!-- 跳转到你的主页 -->
       <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
-      <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
-      <h3><a href="">CV</a></h3>  
-      <h3><a href="">Projects</a></h3>  
-      <h3><a href="">Teaching</a></h3> 
-      <h3><a href="">Code</a></h3> 
+      <h3><a href="">Research</a></h3>
+      <h3><a href="">CV</a></h3>
+      <h3><a href="">Projects</a></h3>
+      <h3><a href="">Teaching</a></h3>
+      <h3><a href="">Code</a></h3>
       <h3><a href="">Personal</a></h3>
       
       <b>Social</b><br>
@@ -127,7 +131,6 @@
         American University<br>
         4400 Massachusetts Ave NW, Washington, DC 20016
       </p>
-
     </header>
 
     <!-- Working Papers -->
