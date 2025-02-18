@@ -47,11 +47,11 @@
         align-items: center; /* Ensures icons and text are aligned */
       }
 
+      /* 两栏部分：将 margin-top 进一步减小 */
       .two-column {
         display: flex;
         justify-content: space-between;
-        /* 原来的 margin-top: 30px; 修改为负数，使其上移 */
-        margin-top: -30px;
+        margin-top: -40px;  /* 原来是 -30px，现在进一步上移 */
       }
 
       .two-column .column {
@@ -80,25 +80,21 @@
         display: block;
       }
 
-      /* 针对 papers-section 内部的 h2 只做小幅调整 */
+      /* 关于 section 内部的其他样式保持不变 */
       .papers-section h2 {
         margin: 1px 0;
       }
 
-      /* 文章组样式：内部 p 标签无外边距 */
       .article-group p {
         margin: 0;
       }
-      /* 每个文章组之间仅留1em空白 */
       .article-group {
         margin-bottom: 1em;
       }
-      /* 文章标题 */
       .paper-title {
         font-size: 100%;
         font-weight: bold;
       }
-      /* Accordion 手风琴折叠 */
       button.accordion {
         background-color: #f8f8f8;
         font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -115,7 +111,6 @@
       button.accordion:hover {
         background-color: #f8f8f8;
       }
-      /* [ + ] / [ - ] 符号 */
       button.accordion::before {
         content: "[+] ";
         color: #777;
@@ -125,7 +120,6 @@
       button.accordion.active::before {
         content: "[-] ";
       }
-      /* Accordion 内容默认隐藏，显示时添加 .show */
       .panel {
         background-color: #fff;
         color: #666;
@@ -138,9 +132,9 @@
         display: block !important;
       }
       
-      /* 将 About Me 部分上移 */
+      /* 将 About Me 部分上移更多 */
       .about-me {
-        margin-top: -20px;
+        margin-top: -30px;  /* 由 -20px 改为 -30px */
       }
     </style>
   </head>
@@ -161,7 +155,7 @@
         <style>
           .social-row a {
             display: inline-block;
-            margin-right: 8px; /* 这里的数值可以根据实际效果调整 */
+            margin-right: 8px;
           }
           .social-row a:last-child {
             margin-right: 0;
