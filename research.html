@@ -1,330 +1,302 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Yan Wang's website</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Yan Wang's website</title>
 
-    <!-- Styles and Fonts -->
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+  <!-- Styles and Fonts -->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/academicons.min.css"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        /* 让整个页面更紧凑 */
-        h1 {
-            font-size: 36px;
-            margin-bottom: 5px; /* 标题下的间距更小 */
-        }
-        .wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        /* 减小章节之间的间距 */
-        h2 {
-            margin-top: 8px;  /* 章节标题上边距 */
-            margin-bottom: 4px;  /* 章节标题下边距 */
-        }
-        hr {
-            margin-top: 2px;  /* 分割线与前后文本距离 */
-            margin-bottom: 6px;
-        }
-        .paper-title {
-            margin: 0;
-            font-size: 100%;
-            font-weight: bold;
-        }
-        /* 统一使用链接蓝色，可以按需替换为其他色值 */
-        a.title-link {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a.title-link:hover {
-            text-decoration: underline; /* 悬停时可显示下划线 */
-        }
-
-        .accordion {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            color: #0366d6;
-            padding: 0;  /* 去除多余内边距，让行距更紧 */
-            font-size: 90%;
-            margin-top: 3px;
-            display: inline-block;
-        }
-        .accordion::before {
-            content: "[+] ";
-            color: black;
-        }
-        .accordion.active::before {
-            content: "[-] ";
-            color: black;
-        }
-        .panel {
-            background-color: #F1F1F1;
-            color: #666;
-            padding: 10px;
-            display: none;
-            margin-top: 3px;
-        }
-        /* 合作者链接：普通蓝色且非加粗 */
-        a.collab-link {
-            color: #0056b3;
-            font-weight: normal;
-            text-decoration: none;
-        }
-        a.collab-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    /* 标题及导航等默认使用 #007bff */
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    /* 将不同板块间距缩到最小 */
+    h2 {
+      margin: 0;
+    }
+    hr {
+      margin: 0;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: 100%;
+      font-weight: bold;
+    }
+    /* 手风琴按钮（Abstract） */
+    .accordion {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: #007bff;
+      padding: 0;
+      font-size: 90%;
+      display: inline-block;
+      margin-top: 3px;
+    }
+    .accordion::before {
+      content: "[+] ";
+      color: black;
+    }
+    .accordion.active::before {
+      content: "[-] ";
+      color: black;
+    }
+    .panel {
+      background-color: #F1F1F1;
+      color: #666;
+      padding: 10px;
+      display: none;
+      margin-top: 3px;
+    }
+    /* 合作者链接统一颜色与文章标题相同，非加粗 */
+    a.collab-link {
+      color: #007bff;
+      font-weight: normal;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <h1>Yan Wang</h1>
-            <p style="margin-bottom:5px;">
-                Ph.D. Candidate in Economics<br>American University
-            </p>
+  <div class="wrapper">
 
-            <h3 style="margin-bottom:2px;"><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
-            <h3 style="margin-bottom:2px;"><a href="https://yanwangecon.com/research.html">Research</a></h3>
-            <h3 style="margin-bottom:2px;"><a href="">CV</a></h3>
-            <h3 style="margin-bottom:2px;"><a href="">Projects</a></h3>
-            <h3 style="margin-bottom:2px;"><a href="">Teaching</a></h3>
-            <h3 style="margin-bottom:2px;"><a href="">Code</a></h3>
-            <h3 style="margin-bottom:2px;"><a href="">Personal</a></h3>
+    <header>
+      <h1>Yan Wang</h1>
+      <p style="margin-bottom:5px;">
+        Ph.D. Candidate in Economics<br>American University
+      </p>
 
-            <b>Social</b><br>
-            <div class="social-row" style="margin-bottom:5px;">
-                <a href="mailto:yw3864a@american.edu" class="author-social" target="_blank">
-                    <i class="fa fa-envelope-square"></i> Email
-                </a>
-                <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
-                    <i class="ai ai-google-scholar"></i> Scholar
-                </a>
-                <a href="https://github.com/yw3864" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
+      <h3 style="margin-bottom:2px;"><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
+      <h3 style="margin-bottom:2px;"><a href="https://yanwangecon.com/research.html">Research</a></h3>
+      <h3 style="margin-bottom:2px;"><a href="">CV</a></h3>
+      <h3 style="margin-bottom:2px;"><a href="">Projects</a></h3>
+      <h3 style="margin-bottom:2px;"><a href="">Teaching</a></h3>
+      <h3 style="margin-bottom:2px;"><a href="">Code</a></h3>
+      <h3 style="margin-bottom:2px;"><a href="">Personal</a></h3>
 
-            <p style="margin-bottom:5px;">
-                <b>Contact:</b><br>
-                Department of Economics<br>
-                American University<br>
-                4400 Massachusetts Ave NW, Washington, DC 20016
-            </p>
-        </header>
+      <b>Social</b><br>
+      <div class="social-row" style="margin-bottom:5px;">
+        <a href="mailto:yw3864a@american.edu" class="author-social" target="_blank">
+          <i class="fa fa-envelope-square"></i> Email
+        </a>
+        <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
+          <i class="ai ai-google-scholar"></i> Scholar
+        </a>
+        <a href="https://github.com/yw3864" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
 
-        <!-- Working Papers -->
-        <section>
-            <h2>Working Papers</h2>
-            <hr>
+      <p style="margin-bottom:5px;">
+        <b>Contact:</b><br>
+        Department of Economics<br>
+        American University<br>
+        4400 Massachusetts Ave NW, Washington, DC 20016
+      </p>
+    </header>
 
-            <!-- Paper 1: Climate Change Synthesis -->
-            <p class="paper-title">
-                <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EUtC70e7bA1AsAEL1wNqH8oBrZr03lMndGrBAd303sKFAg?e=CPrfXx"
-                   target="_blank" class="title-link">
-                   Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda1
-                </a>
-            </p>
-            <p style="margin:0;">
-                with 
-                <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz" class="collab-link" target="_blank">Nepomuk Dunz</a> 
-                and 
-                <a href="https://blogs.worldbank.org/en/team/c/christian-schoder" class="collab-link" target="_blank">Christian Schoder</a>
-            </p>
-            <p style="margin:0;">
-                <i>Submitted to The World Bank Research Observer, February 12, 2025</i> 
-                ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EUtC70e7bA1AsAEL1wNqH8oBrZr03lMndGrBAd303sKFAg?e=CPrfXx" target="_blank">Link</a> )
-            </p>
-            <button class="accordion"><strong>Abstract</strong></button>
-            <div class="panel">
-                <p style="margin:0;">
-                    Abstract:<br>
-                    The assessment of climate-related economic impacts and the formulation of effective policies present significant analytical challenges. This paper explores these challenges by examining the socio-economic system's key characteristics, such as uncertainty, nonlinear shock transmission, and socio-economic tipping points, which are essential for evaluating climate impacts and devising decarbonization strategies. The study identifies the most pertinent avenues for improving diagnostic and analytical tools used in the macroeconomic evaluation of the physical impacts of climate change, as well as the risks and opportunities associated with low-carbon transition policies. Furthermore, it advocates for a collaborative approach to integrate these insights into global development strategies. These findings aim to support policymakers in addressing climate challenges and promoting sustainable development.
-                </p>
-            </div>
+    <!-- Working Papers -->
+    <section>
+      <h2>Working Papers</h2>
+      <hr>
 
-            <hr>
+      <!-- Paper 1 -->
+      <p class="paper-title">
+        <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EUtC70e7bA1AsAEL1wNqH8oBrZr03lMndGrBAd303sKFAg?e=CPrfXx" target="_blank">
+          Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda1
+        </a>
+      </p>
+      <p style="margin:0;">
+        with 
+        <a href="https://blogs.worldbank.org/en/team/n/nepomuk-dunz" class="collab-link" target="_blank">Nepomuk Dunz</a> 
+        and 
+        <a href="https://blogs.worldbank.org/en/team/c/christian-schoder" class="collab-link" target="_blank">Christian Schoder</a>
+      </p>
+      <p style="margin:0;">
+        <i>Submitted to The World Bank Research Observer, February 12, 2025</i>
+        ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EUtC70e7bA1AsAEL1wNqH8oBrZr03lMndGrBAd303sKFAg?e=CPrfXx" target="_blank">Link</a> )
+      </p>
+      <button class="accordion"><strong>Abstract</strong></button>
+      <div class="panel">
+        <p style="margin:0;">
+          Abstract:<br>
+          The assessment of climate-related economic impacts and the formulation of effective policies present significant analytical challenges. This paper explores these challenges by examining the socio-economic system's key characteristics, such as uncertainty, nonlinear shock transmission, and socio-economic tipping points, which are essential for evaluating climate impacts and devising decarbonization strategies. The study identifies the most pertinent avenues for improving diagnostic and analytical tools used in the macroeconomic evaluation of the physical impacts of climate change, as well as the risks and opportunities associated with low-carbon transition policies. Furthermore, it advocates for a collaborative approach to integrate these insights into global development strategies. These findings aim to support policymakers in addressing climate challenges and promoting sustainable development.
+        </p>
+      </div>
 
-            <!-- Paper 2: Policy Interventions -->
-            <p class="paper-title">
-                <a href="https://www.nber.org/papers/w33485" target="_blank" class="title-link">
-                    Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
-                </a>
-            </p>
-            <p style="margin:0;">
-                with 
-                <a href="https://siepr.stanford.edu/people/steven-davis" class="collab-link" target="_blank">Steven J. Davis</a>, 
-                <a href="https://www.american.edu/cas/faculty/dl5165a.cfm" class="collab-link" target="_blank">Dingqian Liu</a>, 
-                and 
-                <a href="https://www.american.edu/cas/faculty/sheng.cfm" class="collab-link" target="_blank">Xuguang Simon Sheng</a>
-            </p>
-            <p style="margin:0;">
-                <i>Hoover Institution Economics Working Paper 25102</i>
-                ( 
-                    <a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic" 
-                       target="_blank">Link</a> 
-                ), 
-                NBER Working Paper 33485, DOI: 10.3386/w33485, Issue Date: February 2025
-                ( <a href="https://www.nber.org/papers/w33485" target="_blank">Link</a> )
-            </p>
-            <button class="accordion"><strong>Abstract</strong></button>
-            <div class="panel">
-                <p style="margin:0;">
-                    Abstract:<br>
-                    China’s stock market greatly outperformed other national markets during the first several months of the COVID-19 pandemic, and it did so even before it became evident that early containment efforts would flounder in the United States and many other countries. As to why, one view holds that aggressive monetary and credit easing propped up Chinese equity values. To assess this view, we consider several interventions that eased monetary and credit conditions in the first six months of 2020. Our analysis finds clear evidence that these interventions raised implied stock market volatility but little evidence that they influenced stock price levels. We also consider policy actions that restricted short selling, limited stock sales, and boosted stock purchases. These efforts to raise net equity demand were small in scale and highly time-limited, as we discuss, suggesting that any direct effects on stock prices were also modest. Neither our study nor other work known to us provides a ready explanation for the extraordinary performance of China’s stock market in the first half of 2020. This performance is even more striking in hindsight, given later developments in China’s economy and stock market.
-                </p>
-            </div>
-        </section>
+      <hr>
 
-        <!-- Published & Forthcoming Papers -->
-        <section>
-            <h2>Published &amp; Forthcoming Papers</h2>
-            <hr>
+      <!-- Paper 2 -->
+      <p class="paper-title">
+        <a href="https://www.nber.org/papers/w33485" target="_blank">
+          Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
+        </a>
+      </p>
+      <p style="margin:0;">
+        with 
+        <a href="https://siepr.stanford.edu/people/steven-davis" class="collab-link" target="_blank">Steven J. Davis</a>, 
+        <a href="https://www.american.edu/cas/faculty/dl5165a.cfm" class="collab-link" target="_blank">Dingqian Liu</a>, 
+        and 
+        <a href="https://www.american.edu/cas/faculty/sheng.cfm" class="collab-link" target="_blank">Xuguang Simon Sheng</a>
+      </p>
+      <p style="margin:0;">
+        <i>Hoover Institution Economics Working Paper 25102</i> 
+        ( <a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic" target="_blank">Link</a> ), 
+        NBER Working Paper 33485, DOI: 10.3386/w33485, Issue Date: February 2025
+        ( <a href="https://www.nber.org/papers/w33485" target="_blank">Link</a> )
+      </p>
+      <button class="accordion"><strong>Abstract</strong></button>
+      <div class="panel">
+        <p style="margin:0;">
+          Abstract:<br>
+          China’s stock market greatly outperformed other national markets during the first several months of the COVID-19 pandemic, and it did so even before it became evident that early containment efforts would flounder in the United States and many other countries. As to why, one view holds that aggressive monetary and credit easing propped up Chinese equity values. To assess this view, we consider several interventions that eased monetary and credit conditions in the first six months of 2020. Our analysis finds clear evidence that these interventions raised implied stock market volatility but little evidence that they influenced stock price levels. We also consider policy actions that restricted short selling, limited stock sales, and boosted stock purchases. These efforts to raise net equity demand were small in scale and highly time-limited, as we discuss, suggesting that any direct effects on stock prices were also modest. Neither our study nor other work known to us provides a ready explanation for the extraordinary performance of China’s stock market in the first half of 2020. This performance is even more striking in hindsight, given later developments in China’s economy and stock market.
+        </p>
+      </div>
+    </section>
 
-            <p class="paper-title">
-                <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" 
-                   target="_blank" class="title-link">
-                   An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up
-                </a>
-            </p>
-            <p style="margin:0;">
-                with 
-                <a href="https://scholar.google.com/" class="collab-link" target="_blank" style="color: #0056b3;">
-                    Liping Li
-                </a>, 
-                Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen
-            </p>
-            <p style="margin:0;">
-                <i>The Eighteenth International Conference on Management Science and Engineering Management, 
-                First Online: August 4, 2024</i> 
-                ( 
-                    <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" target="_blank">Link</a> 
-                )
-            </p>
-            <button class="accordion"><strong>Abstract</strong></button>
-            <div class="panel">
-                <p style="margin:0;">
-                    Abstract:<br>
-                    In order to keep the sustainable global developing steps and improve the innovation ability in open innovation platforms, sustainable technology catching up is indispensable in China. However, sometimes the international technology catching up paths, such as international import, FDI, and strategic alliances may not play so significant effect for laggard firms in China at their early stage of catching up on account of their weak absorptive capacity, insufficient complementary assets, and far geographical distance from advanced technologies. Therefore, how do these laggard firms expedite their early-stage sustainable technology catching up availably? Based on the extant paths, from the perspective of open innovation, we put forward a new path named learning-by-technology learning intermediary firms to help those laggard firms improve their technology catching up process and build an evolutionary economics model to capture the evolution process of this system. We gave out the technology learning intermediary firms play different roles such as technology pursuers, technology innovators, and technology transfers at different stages during the laggard firms technology catching up process.
-                </p>
-            </div>
-        </section>
+    <!-- Published & Forthcoming Papers -->
+    <section>
+      <h2>Published &amp; Forthcoming Papers</h2>
+      <hr>
 
-        <!-- Macro-Financial Review -->
-        <section>
-            <h2>Macro-Financial Review</h2>
-            <hr>
+      <p class="paper-title">
+        <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" target="_blank">
+          An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up
+        </a>
+      </p>
+      <p style="margin:0;">
+        with Liping Li, Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen
+      </p>
+      <p style="margin:0;">
+        <i>The Eighteenth International Conference on Management Science and Engineering Management, First Online: August 4, 2024</i>
+        ( <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" target="_blank">Link</a> )
+      </p>
+      <button class="accordion"><strong>Abstract</strong></button>
+      <div class="panel">
+        <p style="margin:0;">
+          Abstract:<br>
+          In order to keep the sustainable global developing steps and improve the innovation ability in open innovation platforms, sustainable technology catching up is indispensable in China. However, sometimes the international technology catching up paths, such as international import, FDI, and strategic alliances may not play so significant effect for laggard firms in China at their early stage of catching up on account of their weak absorptive capacity, insufficient complementary assets, and far geographical distance from advanced technologies. Therefore, how do these laggard firms expedite their early-stage sustainable technology catching up availably? Based on the extant paths, from the perspective of open innovation, we put forward a new path named learning-by-technology learning intermediary firms to help those laggard firms improve their technology catching up process and build an evolutionary economics model to capture the evolution process of this system. We gave out the technology learning intermediary firms play different roles such as technology pursuers, technology innovators, and technology transfers at different stages during the laggard firms technology catching up process.
+        </p>
+      </div>
+    </section>
 
-            <p class="paper-title">
-                <a href="#" class="title-link" style="text-decoration:none;">
-                    Macro-Financial Review
-                </a>
-            </p>
-            <p style="margin:0;">
-                As a core member of the <strong>Macro-Financial Review</strong> team under the leadership of 
-                <a href="https://blogs.worldbank.org/en/team/n/norbert-fiess" class="collab-link" target="_blank">Norbert Fiess</a> and 
-                <a href="https://blogs.worldbank.org/en/team/e/erik-feyen" class="collab-link" target="_blank">Erik Feyen</a>,
-                co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the
-                World Bank Group (WBG). ( 
-                    <a href="https://american0-my.sharepoint.com/:i:/g/personal/yw3864a_american_edu/EfhFm-3FSQ5Ns36Ifrt4-IYBdRENGb1r4K_XMe1GHp1Z4A?e=euzSsp" target="_blank">
-                        View Cover
-                    </a> 
-                )
-            </p>
-            <ul style="margin-top:3px; margin-bottom:5px;">
-                <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
-                <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).</li>
-            </ul>
-        </section>
+    <!-- Macro-Financial Review -->
+    <section>
+      <h2>Macro-Financial Review</h2>
+      <hr>
+      <p style="margin:0;">
+        As a core member of the <strong>Macro-Financial Review</strong> team under the leadership of 
+        <a href="https://blogs.worldbank.org/en/team/n/norbert-fiess" class="collab-link" target="_blank">Norbert Fiess</a> 
+        and 
+        <a href="https://blogs.worldbank.org/en/team/e/erik-feyen" class="collab-link" target="_blank">Erik Feyen</a>,
+        co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the
+        World Bank Group (WBG). 
+        ( <a href="https://american0-my.sharepoint.com/:i:/g/personal/yw3864a_american_edu/EfhFm-3FSQ5Ns36Ifrt4-IYBdRENGb1r4K_XMe1GHp1Z4A?e=euzSsp" target="_blank">View Cover</a> )
+      </p>
+      <ul style="margin:3px 0;">
+        <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
+        <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).</li>
+      </ul>
+    </section>
 
-        <!-- Works in Progress -->
-        <section>
-            <h2>Works in Progress</h2>
-            <hr>
+    <!-- Works in Progress -->
+    <section>
+      <h2>Works in Progress</h2>
+      <hr>
 
-            <!-- 1. Financial Crises and Climate Shocks ... -->
-            <p class="paper-title">
-                <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EavgWBYvxI9BtycqNGUrNp4Bq14p7p13WeVzLS4o1RXhvg?e=rFWgbL" 
-                   target="_blank" class="title-link">
-                   Financial Crises and Climate Shocks during the Great Depression: A DSGE Perspective
-                </a> 
-                ( Link )
-            </p>
-            <button class="accordion"><strong>Abstract</strong></button>
-            <div class="panel">
-                <p style="margin:0;">
-                    Abstract:<br>
-                    This study explores the compound crisis that struck China in the 1930s, fueled by the overlapping impacts of the Great Depression and frequent rare and severe natural disasters. By utilizing a newly constructed annual climate index based on the self-calibrated Palmer Drought Severity Index (scPDSI) and financial crises data from Reinhart and Rogoff (2008, 2009), we identify key periods of compounded disruptions during the Great Depression. Employing a Dynamic Stochastic General Equilibrium (DSGE) model specifically designed for China’s multi-sector economy under the silver standard, we assess the contributions of external financial shocks and internal climate shocks to macroeconomic fluctuations. Our findings demonstrate that climate shocks had a dominant and lasting impact on agricultural output and GDP, far outweighing the effects of the Great Depression, which primarily affected trade through declining exports and imports. The analysis further uncovers how disruptions in agriculture propagated through other sectors, intensifying economic instability. Counterfactual simulations reveal that modern monetary policies, such as flexible interest rate adjustments, could have mitigated short-term fluctuations but would have required effective fiscal coordination to avoid resource misallocation and maintain agricultural investment. The study highlights the critical role of agriculture as a transmission channel for compound shocks and provides policy insights for modern economies, emphasizing the need for coordinated monetary and fiscal responses to manage overlapping crises.
-                </p>
-            </div>
+      <!-- 1. Financial Crises ... -->
+      <p class="paper-title" style="margin-bottom:0;">
+        <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EavgWBYvxI9BtycqNGUrNp4Bq14p7p13WeVzLS4o1RXhvg?e=rFWgbL"
+           target="_blank">
+          Financial Crises and Climate Shocks during the Great Depression: A DSGE Perspective
+        </a> (Link)
+      </p>
+      <button class="accordion"><strong>Abstract</strong></button>
+      <div class="panel">
+        <p style="margin:0;">
+          Abstract:<br>
+          This study explores the compound crisis that struck China in the 1930s, fueled by the overlapping impacts of the Great Depression and frequent rare and severe natural disasters. By utilizing a newly constructed annual climate index based on the self-calibrated Palmer Drought Severity Index (scPDSI) and financial crises data from Reinhart and Rogoff (2008, 2009), we identify key periods of compounded disruptions during the Great Depression. Employing a Dynamic Stochastic General Equilibrium (DSGE) model specifically designed for China’s multi-sector economy under the silver standard, we assess the contributions of external financial shocks and internal climate shocks to macroeconomic fluctuations. Our findings demonstrate that climate shocks had a dominant and lasting impact on agricultural output and GDP, far outweighing the effects of the Great Depression, which primarily affected trade through declining exports and imports. The analysis further uncovers how disruptions in agriculture propagated through other sectors, intensifying economic instability. Counterfactual simulations reveal that modern monetary policies, such as flexible interest rate adjustments, could have mitigated short-term fluctuations but would have required effective fiscal coordination to avoid resource misallocation and maintain agricultural investment. The study highlights the critical role of agriculture as a transmission channel for compound shocks and provides policy insights for modern economies, emphasizing the need for coordinated monetary and fiscal responses to manage overlapping crises.
+        </p>
+      </div>
 
-            <hr>
+      <hr>
 
-            <!-- 2. The Nonlinear Impact of ESG ... -->
-            <p class="paper-title">
-                <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/Ee3O0hiOGfNFmkedniNqBFgBBg_tRuRY472b47wpMDWUPA?e=ds7f71" 
-                   target="_blank" class="title-link">
-                   The Nonlinear Impact of ESG on Stock Market Performance among U.S. Manufacturing and Banking Firms
-                </a>
-                ( Link )<br>
-                with 
-                <a href="https://www.american.edu/cas/faculty/sonenshi.cfm" 
-                   class="collab-link" target="_blank">
-                   Ralph Sonenshine
-                </a>
-            </p>
-            <button class="accordion"><strong>Abstract</strong></button>
-            <div class="panel">
-                <p style="margin:0;">
-                    Abstract:<br>
-                    Investing according to ESG concerns has become popular and controversial. Companies that score well on ESG concerns may attract socially conscious investors. But do ESG scores collectively and individually impact stock market performance? This paper weighs in on this issue by analyzing the impact that changes in ESG scores have on both the excess stock market returns (alpha) and risk-adjusted returns (Sharpe ratio). We also analyze the differential impact of ESG on financial performance among U.S. manufacturing and banking firms. Using quantile regression analysis, our results show a nonlinear relationship, characterized by a U-shaped and an inverted-U shaped relationship between ESG ratings and alpha and Sharpe ratios respectively. Moreover, we find significant differences regarding the impact of governance, environmental, and social on excess stock market returns in both industries.
-                </p>
-            </div>
+      <!-- 2. The Nonlinear Impact of ESG ... -->
+      <p class="paper-title" style="margin-bottom:0;">
+        <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/Ee3O0hiOGfNFmkedniNqBFgBBg_tRuRY472b47wpMDWUPA?e=ds7f71"
+           target="_blank">
+          The Nonlinear Impact of ESG on Stock Market Performance among U.S. Manufacturing and Banking Firms
+        </a> (Link)
+        <br>with 
+        <a href="https://www.american.edu/cas/faculty/sonenshi.cfm" 
+           class="collab-link" target="_blank">
+          ralph sonenshine
+        </a>
+      </p>
+      <button class="accordion"><strong>Abstract</strong></button>
+      <div class="panel">
+        <p style="margin:0;">
+          Abstract:<br>
+          Investing according to ESG concerns has become popular and controversial. Companies that score well on ESG concerns may attract socially conscious investors. But do ESG scores collectively and individually impact stock market performance? This paper weighs in on this issue by analyzing the impact that changes in ESG scores have on both the excess stock market returns (alpha) and risk-adjusted returns (Sharpe ratio). We also analyze the differential impact of ESG on financial performance among U.S. manufacturing and banking firms. Using quantile regression analysis, our results show a nonlinear relationship, characterized by a U-shaped and an inverted-U shaped relationship between ESG ratings and alpha and Sharpe ratios respectively. Moreover, we find significant differences regarding the impact of governance, environmental, and social on excess stock market returns in both industries.
+        </p>
+      </div>
 
-            <hr>
+      <hr>
 
-            <!-- 3. Silver, Climate, and China’s Price Revolution -->
-            <p class="paper-title">
-                <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/ERNdwr73XStGmseB21nSxF4B2yJQNts4nK-FYWN6niqkkA?e=Afo5pM" 
-                   target="_blank" class="title-link">
-                   Silver, Climate, and China’s Price Revolution
-                </a>
-                ( Link )
-            </p>
-            <button class="accordion"><strong>Abstract</strong></button>
-            <div class="panel">
-                <p style="margin:0;">
-                    Abstract:<br>
-                    This study examines the price revolution in Qing China (1644–1911), focusing on silver flows, climate shocks, and socio-economic factors in the North China Plain (1736–1911). Using ARDL and NARDL models, the findings reveal strong long-term co-integration among these variables. Unlike early modern Europe, Qing China's price revolution was not solely driven by monetary expansion but resulted from the interaction between silver inflows and climate variability. Silver supply had a strong long-term positive effect on prices, yet the silver-to-copper ratio exhibited opposing short- and long-run effects, suggesting that liquidity constraints tempered inflation over time. Climate shocks had asymmetric effects, with droughts exerting a persistent upward pressure on prices, while floods and temperature variations primarily affected short-term volatility. Population growth had no significant impact, challenging conventional Malthusian narratives. These findings underscore the necessity of nonlinear models in historical economic analysis and provide a broader framework for understanding how climate and financial shocks shape price dynamics, both in historical contexts and contemporary economies vulnerable to similar risks.
-                </p>
-            </div>
-        </section>
-    </div>
+      <!-- 3. Silver, Climate, and China’s Price Revolution -->
+      <p class="paper-title" style="margin-bottom:0;">
+        <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/ERNdwr73XStGmseB21nSxF4B2yJQNts4nK-FYWN6niqkkA?e=Afo5pM"
+           target="_blank">
+          Silver, Climate, and China’s Price Revolution
+        </a> (Link)
+      </p>
+      <button class="accordion"><strong>Abstract</strong></button>
+      <div class="panel">
+        <p style="margin:0;">
+          Abstract:<br>
+          This study examines the price revolution in Qing China (1644–1911), focusing on silver flows, climate shocks, and socio-economic factors in the North China Plain (1736–1911). Using ARDL and NARDL models, the findings reveal strong long-term co-integration among these variables. Unlike early modern Europe, Qing China's price revolution was not solely driven by monetary expansion but resulted from the interaction between silver inflows and climate variability. Silver supply had a strong long-term positive effect on prices, yet the silver-to-copper ratio exhibited opposing short- and long-run effects, suggesting that liquidity constraints tempered inflation over time. Climate shocks had asymmetric effects, with droughts exerting a persistent upward pressure on prices, while floods and temperature variations primarily affected short-term volatility. Population growth had no significant impact, challenging conventional Malthusian narratives. These findings underscore the necessity of nonlinear models in historical economic analysis and provide a broader framework for understanding how climate and financial shocks shape price dynamics, both in historical contexts and contemporary economies vulnerable to similar risks.
+        </p>
+      </div>
+    </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var acc = document.getElementsByClassName("accordion");
-            for (var i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    panel.style.display = (panel.style.display === "block") ? "none" : "block";
-                });
-            }
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var acc = document.getElementsByClassName("accordion");
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          panel.style.display = (panel.style.display === "block") ? "none" : "block";
         });
-    </script>
+      }
+    });
+  </script>
 </body>
 </html>
