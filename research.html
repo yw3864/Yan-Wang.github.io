@@ -1,299 +1,135 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Yan Wang's website</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Yan Wang's website</title>
 
-  <!-- Styles and Fonts -->
-  <link rel="stylesheet" href="stylesheets/styles.css">
-  <link rel="stylesheet" href="stylesheets/github-light.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    <!-- Styles and Fonts -->
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-
-  <style>
-    /* =========== 页面整体排版及字体 ========== */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-    }
-    /* 让所有链接用与Tyler Ransom类似的蓝色 */
-    a {
-      color: #007bff; 
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    /* 标题排版 */
-    h1 {
-      font-size: 36px;
-      margin-bottom: 5px;
-    }
-    .wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    /* 让板块标题和分割线之间非常紧凑 */
-    h2 {
-      margin: 0;
-      padding-top: 10px;
-    }
-    hr {
-      margin: 0;
-      margin-bottom: 5px;
-    }
-
-    /* =========== 文章标题与合作信息等 ========== */
-    .paper-title {
-      margin: 0;
-      font-size: 100%;
-      font-weight: bold;
-    }
-    /* 如果需要额外紧凑，可将margin去掉或设更小 */
-    .paper-title + p {
-      margin: 0;  /* 紧跟在paper-title后的p标签去除上下空白 */
-    }
-
-    /* =========== Accordion手风琴折叠 ========== */
-    /* 仿照Tyler Ransom，用背景色#f8f8f8、灰色[+]符号等 */
-    button.accordion {
-      font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      background-color: #f8f8f8;
-      transition: 0.3s;
-      margin-top: 3px;
-      color: #000;  /* 按需：文本可保持黑/深色 */
-    }
-    button.accordion:hover {
-      background-color: #f8f8f8;
-    }
-    /* “[+]”符号 */
-    button.accordion::after {
-      content: " [+] ";
-      font-size: 90%;
-      color: #777;
-      float: left;
-      margin-left: 1px;
-    }
-    /* 打开后的“[-]”符号 */
-    button.accordion.active::after {
-      content: " [−] ";
-    }
-
-    /* Panel折叠内容 */
-    .panel {
-      background-color: white;
-      color: #666;
-      padding: 10px;
-      display: none; /* 默认折叠 */
-      margin-top: 3px;
-      font-size: 100%;
-    }
-    /* 展开时加个 show 类，让它display:block */
-    .panel.show {
-      display: block !important;
-    }
-
-  </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .paper-title, h3 a {
+            margin: 0;
+            font-size: 100%;
+            font-weight: bold;
+            color: #3399CC;
+        }
+        .accordion {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            color: black;
+            padding: 3px 0;
+            font-size: 90%;
+            display: inline-block;
+        }
+        .accordion::before {
+            content: "[+] ";
+            color: black;
+        }
+        .accordion.active::before {
+            content: "[-] ";
+            color: black;
+        }
+        .panel {
+            background-color: #F1F1F1;
+            color: black;
+            padding: 10px;
+            display: none;
+        }
+        hr {
+            margin: 15px 0;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>Yan Wang</h1>
-      <p style="margin-bottom:5px;">Ph.D. Candidate in Economics<br>American University</p>
+    <div class="wrapper">
+        <header>
+            <h1>Yan Wang</h1>
+            <p>Ph.D. Candidate in Economics<br>American University</p>
+            
+            <h3><a href="#">Home</a></h3>
+            <h3><a href="#">Research</a></h3>
+            <h3><a href="#">CV</a></h3>  
+            <h3><a href="#">Projects</a></h3>  
+            <h3><a href="#">Teaching</a></h3> 
+            <h3><a href="#">Code</a></h3> 
+            <h3><a href="#">Personal</a></h3>
+            
+            <b>Social</b><br>
+            <div class="social-row">
+                <a href="mailto:yw3864a@american.edu" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+                <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
+                <a href="https://github.com/yw3864"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <br>
+            <p><b>Contact:</b><br>Department of Economics<br>American University<br>4400 Massachusetts Ave NW, Washington, DC 20016</p>
+        </header>
 
-      <h3 style="margin-bottom:3px;"><a href="">Home</a></h3>
-      <h3 style="margin-bottom:3px;"><a href="">Research</a></h3>
-      <h3 style="margin-bottom:3px;"><a href="">CV</a></h3>
-      <h3 style="margin-bottom:3px;"><a href="">Projects</a></h3>
-      <h3 style="margin-bottom:3px;"><a href="">Teaching</a></h3>
-      <h3 style="margin-bottom:3px;"><a href="">Code</a></h3>
-      <h3 style="margin-bottom:3px;"><a href="">Personal</a></h3>
+        <section>
+            <h2>Working Papers</h2>
+            <hr>
 
-      <b>Social</b><br>
-      <div style="margin-bottom:5px;">
-        <a href="mailto:yw3864a@american.edu" target="_blank">
-          <i class="fa fa-envelope-square"></i> Email
-        </a>
-        <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
-          <i class="ai ai-google-scholar"></i> Scholar
-        </a>
-        <a href="https://github.com/yw3864" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
+            <p class="paper-title"><a href="#">Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda</a></p>
+            <p>with <a href="#">Nepomuk Dunz</a> and <a href="#">Christian Schoder</a></p>
+            <p><i>Submitted to The World Bank Research Observer</i>, February 12, 2025 (<a href="#">Link</a>)</p>
+            <button class="accordion"><strong>Abstract</strong></button>
+            <div class="panel"><p>Climate-related economic impacts present significant analytical challenges...</p></div>
+            <hr>
 
-      <p style="margin-bottom:5px;">
-        <b>Contact:</b><br>Department of Economics<br>
-        American University<br>
-        4400 Massachusetts Ave NW, Washington, DC 20016
-      </p>
-    </header>
+            <p class="paper-title"><a href="#">Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic</a></p>
+            <p>with <a href="#">Steven J. Davis</a>, <a href="#">Dingqian Liu</a>, and <a href="#">Xuguang Simon Sheng</a></p>
+            <p><i>Hoover Institution Economics Working Paper 25102</i> (<a href="#">Link</a>), NBER Working Paper 33485, DOI: 10.3386/w33485, Issue Date: February 2025 (<a href="#">Link</a>)</p>
+            <button class="accordion"><strong>Abstract</strong></button>
+            <div class="panel"><p>China’s stock market greatly outperformed other national markets during early COVID-19...</p></div>
+            
+            <h2>Macro-Financial Review</h2>
+            <hr>
+            <p class="paper-title"><strong>Macro-Financial Review</strong></p>
+            <p>As a core member of the Macro-Financial Review team under the leadership of <a href="#">Norbert Fiess</a> and <a href="#">Erik Feyen</a>, co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG). <a href="#">[View Cover]</a></p>
+            <ul>
+                <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
+                <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).</li>
+            </ul>
+            
+            <h2>Works in Progress</h2>
+            <hr>
+            <p>Currently no works in progress listed.</p>
+        </section>
+    </div>
 
-    <!-- Working Papers -->
-    <section>
-      <h2>Working Papers</h2>
-      <hr>
-
-      <!-- 例1 -->
-      <p class="paper-title">
-        <a href="#" target="_blank">
-          Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda1
-        </a> 
-      </p>
-      <p>with Nepomuk Dunz and Christian Schoder</p>
-      <p>
-        <i>Submitted to The World Bank Research Observer, February 12, 2025</i>
-        ( <a href="#" target="_blank">Link</a> )
-      </p>
-      <button class="accordion"><strong>Abstract</strong></button>
-      <div class="panel">
-        <p style="margin:0;">
-          Abstract:<br>
-          ...[此处省略摘要内容]...
-        </p>
-      </div>
-
-      <hr>
-
-      <!-- 例2 -->
-      <p class="paper-title">
-        <a href="#" target="_blank">
-          Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
-        </a> 
-      </p>
-      <p>with Steven J. Davis, Dingqian Liu, and Xuguang Simon Sheng</p>
-      <p>
-        <i>Hoover Institution Economics Working Paper 25102</i>
-        ( <a href="#" target="_blank">Link</a> ), 
-        NBER Working Paper 33485, Issue Date: February 2025
-        ( <a href="#" target="_blank">Link</a> )
-      </p>
-      <button class="accordion"><strong>Abstract</strong></button>
-      <div class="panel">
-        <p style="margin:0;">
-          Abstract:<br>
-          ...[此处省略摘要内容]...
-        </p>
-      </div>
-    </section>
-
-    <!-- Published & Forthcoming Papers -->
-    <section>
-      <h2>Published &amp; Forthcoming Papers</h2>
-      <hr>
-
-      <!-- 例3 -->
-      <p class="paper-title">
-        <a href="#" target="_blank">
-          An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up
-        </a>
-      </p>
-      <p>with Liping Li, Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen</p>
-      <p>
-        <i>The Eighteenth International Conference on Management Science and Engineering Management, First Online: August 4, 2024</i>
-        ( <a href="#" target="_blank">Link</a> )
-      </p>
-      <button class="accordion"><strong>Abstract</strong></button>
-      <div class="panel">
-        <p style="margin:0;">
-          Abstract:<br>
-          ...[此处省略摘要内容]...
-        </p>
-      </div>
-    </section>
-
-    <!-- Macro-Financial Review -->
-    <section>
-      <h2>Macro-Financial Review</h2>
-      <hr>
-      <p style="margin:0;">
-        As a core member of the <strong>Macro-Financial Review</strong> team under the leadership of Norbert Fiess and Erik Feyen, co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG).
-        ( <a href="#" target="_blank">View Cover</a> )
-      </p>
-      <ul style="margin:3px 0;">
-        <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: ...</li>
-        <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: ...</li>
-      </ul>
-    </section>
-
-    <!-- Works in Progress -->
-    <section>
-      <h2>Works in Progress</h2>
-      <hr>
-
-      <p class="paper-title" style="margin-bottom:0;">
-        <a href="#" target="_blank">
-          Financial Crises and Climate Shocks during the Great Depression: A DSGE Perspective
-        </a> (Link)
-      </p>
-      <button class="accordion"><strong>Abstract</strong></button>
-      <div class="panel">
-        <p style="margin:0;">
-          Abstract:<br>
-          ...[此处省略摘要内容]...
-        </p>
-      </div>
-
-      <hr>
-
-      <p class="paper-title" style="margin-bottom:0;">
-        <a href="#" target="_blank">
-          The Nonlinear Impact of ESG on Stock Market Performance among U.S. Manufacturing and Banking Firms
-        </a> (Link)
-        <br>with ralph sonenshine
-      </p>
-      <button class="accordion"><strong>Abstract</strong></button>
-      <div class="panel">
-        <p style="margin:0;">
-          Abstract:<br>
-          ...[此处省略摘要内容]...
-        </p>
-      </div>
-
-      <hr>
-
-      <p class="paper-title" style="margin-bottom:0;">
-        <a href="#" target="_blank">
-          Silver, Climate, and China’s Price Revolution
-        </a> (Link)
-      </p>
-      <button class="accordion"><strong>Abstract</strong></button>
-      <div class="panel">
-        <p style="margin:0;">
-          Abstract:<br>
-          ...[此处省略摘要内容]...
-        </p>
-      </div>
-    </section>
-
-  </div>
-
-  <script>
-    // 仿照TylerRansom的accordion折叠实现
-    var acc = document.getElementsByClassName("accordion");
-    for (var i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function(){
-          this.classList.toggle("active");
-          // panel在当前button的下一个元素节点
-          var panel = this.nextElementSibling;
-          if (panel.classList.contains("show")){
-            panel.classList.remove("show");
-          } else {
-            panel.classList.add("show");
-          }
-      });
-    }
-  </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var acc = document.getElementsByClassName("accordion");
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    panel.style.display = panel.style.display === "block" ? "none" : "block";
+                });
+            }
+        });
+    </script>
 </body>
 </html>
