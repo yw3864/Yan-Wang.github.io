@@ -1,108 +1,133 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Correct Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Yan Wang's website</title>
+<head>
+  <!-- 必要的元信息与样式文件 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Yan Wang's website</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <!-- Styles and Fonts -->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/academicons.min.css"/>
 
-    <!-- Ensure Academicons is loaded properly -->
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-      }
+  <style>
+    /* =========== 页面整体排版及字体 ========== */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    /* 链接颜色 */
+    a {
+      color: #007bff; 
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* 页面标题与布局 */
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    /* 板块标题和分割线贴近 */
+    h2 {
+      margin: 0;
+      padding-top: 10px;
+    }
+    hr {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    /* 文章标题与作者同一行、无空行 */
+    .paper-title {
+      margin: 0;
+      font-size: 100%;
+      font-weight: bold;
+    }
+    /* 折叠按钮仿 Tyler Ransom */
+    button.accordion {
+      background-color: #f8f8f8;
+      font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      padding: 0;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 100%;
+      margin-top: 3px;
+      color: #000;
+      transition: 0.3s;
+    }
+    button.accordion:hover {
+      background-color: #f8f8f8;
+    }
+    /* 用 :before 显示 [ + ] 或 [ - ] 符号 */
+    button.accordion::before {
+      content: "[+] ";
+      color: #777;
+      font-size: 90%;
+      margin-right: 4px;
+    }
+    button.accordion.active::before {
+      content: "[-] ";
+    }
+    /* panel 默认折叠；点击后切换 show */
+    .panel {
+      background-color: #fff;
+      color: #666;
+      padding: 10px;
+      display: none;
+      margin-top: 3px;
+      font-size: 100%;
+    }
+    .panel.show {
+      display: block !important;
+    }
+  </style>
+</head>
 
-      h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-      }
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Yan Wang</h1>
+      <p>Ph.D. Candidate in Economics<br>American University</p>
+      
+      <h3><a href="">Home</a></h3>
+      <h3><a href="">Research</a></h3>
+      <h3><a href="">CV</a></h3>  
+      <h3><a href="">Projects</a></h3>  
+      <h3><a href="">Teaching</a></h3> 
+      <h3><a href="">Code</a></h3> 
+      <h3><a href="">Personal</a></h3>
+      
+      <b>Social</b><br>
+      <p>
+        <a href="mailto:yw3864a@american.edu" target="_blank">
+          <i class="fa fa-envelope-square"></i> Email
+        </a>
+        <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
+          <i class="ai ai-google-scholar"></i> Scholar
+        </a>
+        <a href="https://github.com/yw3864" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </p>
 
-      .wrapper {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .social-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center; /* Ensures icons and text are aligned */
-      }
-
-      .two-column {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-      }
-
-      .two-column .column {
-        width: 45%;
-      }
-
-      .column ul {
-        list-style-type: none; /* Removes the bullet points */
-        padding-left: 0; /* Adjust padding */
-      }
-
-      .column ul li {
-        margin-bottom: 10px;
-      }
-
-      .education-list {
-        list-style-type: none; /* Ensures bullet points are removed */
-        padding-left: 0; /* Adjust padding */
-      }
-
-      .education-list li {
-        margin-bottom: 15px;
-      }
-
-      .education-list li span {
-        display: block;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Yan Wang</h1>
-        <p>Ph.D.in Economics<br>American University</p>
-        
-        <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
-        <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
-        <h3><a href="">CV</a></h3>  
-        <h3><a href="">Projects</a></h3>  
-        <h3><a href="">Teaching</a></h3> 
-        <h3><a href="">Code</a></h3> 
-        <h3><a href="">Personal</a></h3>
-        
-        <b>Social</b><br>
-        <div class="social-row">
-            <a href="mailto:yw3864a@american.edu" class="author-social" target="_blank">
-              <i class="fa fa-fw fa-envelope-square"></i> Email
-            </a>
-            <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
-              <i class="ai ai-google-scholar"></i> Scholar
-            </a>
-            <a href="https://github.com/yw3864">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-        </div>
-        <br>
-
-        <p><b>Contact:</b><br>Department of Economics<br>American University<br>4400 Massachusetts Ave NW, Washington, DC 20016</p>
-        
-
+      <p>
+        <b>Contact:</b><br>
+        Department of Economics<br>
+        American University<br>
+        4400 Massachusetts Ave NW, Washington, DC 20016
+      </p>
     </header>
 
     <!-- Working Papers -->
@@ -112,41 +137,43 @@
 
       <!-- Paper 1 -->
       <p class="paper-title">
-        <a href="#" target="_blank">Assessing the Macro-Critical Impacts of Climate Change</a> 
-        with Nepomuk Dunz, Christian Schoder
+        <a href="#" target="_blank">
+          Assessing the Macro-Critical Impacts of Climate Change: Key Considerations for a Research Agenda1
+        </a> with Nepomuk Dunz, Christian Schoder
       </p>
       <p style="margin:0;">
         <i>Submitted to The World Bank Research Observer, February 12, 2025</i>
         ( <a href="#" target="_blank">Link</a> )
       </p>
-      <button class="accordion">Abstract</button>
+      <button class="accordion"><strong>Abstract</strong></button>
       <div class="panel">
         <p style="margin:0;">
-          The assessment of climate-related economic impacts and the formulation of effective policies present significant analytical challenges.
+          The assessment of climate-related economic impacts and the formulation of effective policies present significant analytical challenges. This paper explores these challenges by examining the socio-economic system's key characteristics, such as uncertainty, nonlinear shock transmission, and socio-economic tipping points, which are essential for evaluating climate impacts and devising decarbonization strategies. 
           <br><br>
-          [在此放完整摘要内容，不做省略...]
+          The study identifies the most pertinent avenues for improving diagnostic and analytical tools used in the macroeconomic evaluation of the physical impacts of climate change, as well as the risks and opportunities associated with low-carbon transition policies. Furthermore, it advocates for a collaborative approach to integrate these insights into global development strategies. These findings aim to support policymakers in addressing climate challenges and promoting sustainable development.
         </p>
       </div>
 
-      <div class="paper-spacing"></div>
+      <hr>
 
       <!-- Paper 2 -->
       <p class="paper-title">
-        <a href="#" target="_blank">Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic</a> 
-        with Steven J. Davis, Dingqian Liu, Xuguang Simon Sheng
+        <a href="#" target="_blank">
+          Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
+        </a> with Steven J. Davis, Dingqian Liu, Xuguang Simon Sheng
       </p>
       <p style="margin:0;">
         <i>Hoover Institution Economics Working Paper 25102</i>
-        ( <a href="#" target="_blank">Link</a> ),
+        ( <a href="#" target="_blank">Link</a> ), 
         NBER Working Paper 33485, Issue Date: February 2025
         ( <a href="#" target="_blank">Link</a> )
       </p>
-      <button class="accordion">Abstract</button>
+      <button class="accordion"><strong>Abstract</strong></button>
       <div class="panel">
         <p style="margin:0;">
-          China’s stock market greatly outperformed other national markets during the first several months of the COVID-19 pandemic...
+          China’s stock market greatly outperformed other national markets during the first several months of the COVID-19 pandemic, and it did so even before it became evident that early containment efforts would flounder in the United States and many other countries. As to why, one view holds that aggressive monetary and credit easing propped up Chinese equity values. 
           <br><br>
-          [完整摘要内容...]
+          To assess this view, we consider several interventions that eased monetary and credit conditions in the first six months of 2020. Our analysis finds clear evidence that these interventions raised implied stock market volatility but little evidence that they influenced stock price levels. We also consider policy actions that restricted short selling, limited stock sales, and boosted stock purchases. These efforts to raise net equity demand were small in scale and highly time-limited, as we discuss, suggesting that any direct effects on stock prices were also modest. Neither our study nor other work known to us provides a ready explanation for the extraordinary performance of China’s stock market in the first half of 2020. This performance is even more striking in hindsight, given later developments in China’s economy and stock market.
         </p>
       </div>
     </section>
@@ -156,21 +183,21 @@
       <h2>Published &amp; Forthcoming Papers</h2>
       <hr>
 
-      <!-- Example Paper -->
       <p class="paper-title">
-        <a href="#" target="_blank">An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching Up</a> 
-        with Liping Li, Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen
+        <a href="#" target="_blank">
+          An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up
+        </a> with Liping Li, Zhen Luo, Haiyan Sun, Yongqing Tang, Huadong Wan, Qisheng Chen
       </p>
       <p style="margin:0;">
-        <i>The Eighteenth International Conference on Management Science and Engineering Management, August 4, 2024</i>
+        <i>The Eighteenth International Conference on Management Science and Engineering Management, First Online: August 4, 2024</i>
         ( <a href="#" target="_blank">Link</a> )
       </p>
-      <button class="accordion">Abstract</button>
+      <button class="accordion"><strong>Abstract</strong></button>
       <div class="panel">
         <p style="margin:0;">
-          Sustainable technology catching up is indispensable in China...
+          Sustainable technology catching up is indispensable in China. However, sometimes the international technology catching up paths, such as international import, FDI, and strategic alliances may not play so significant effect for laggard firms in China at their early stage of catching up on account of their weak absorptive capacity, insufficient complementary assets, and far geographical distance from advanced technologies. 
           <br><br>
-          [完整摘要...]
+          Therefore, how do these laggard firms expedite their early-stage sustainable technology catching up availably? Based on the extant paths, from the perspective of open innovation, we put forward a new path named learning-by-technology-learning intermediary firms to help those laggard firms improve their technology catching up process and build an evolutionary economics model to capture the evolution process of this system. We gave out the technology learning intermediary firms play different roles such as technology pursuers, technology innovators, and technology transfers at different stages during the laggard firms technology catching up process.
         </p>
       </div>
     </section>
@@ -180,15 +207,17 @@
       <h2>Macro-Financial Review</h2>
       <hr>
       <p style="margin:0;">
-        As a core member of the <strong>Macro-Financial Review</strong> team...
+        As a core member of the <strong>Macro-Financial Review</strong> team under the leadership of Norbert Fiess and Erik Feyen, co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG).
       </p>
-      <p style="margin:0;">( <a href="#" target="_blank">View Cover</a> )</p>
+      <p style="margin:0;">
+        ( <a href="#" target="_blank">View Cover</a> )
+      </p>
       <ul style="margin:3px 0;">
         <li>
           <strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).
         </li>
         <li>
-          <strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications (<i>pp. 80-89</i>).
+          <strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).
         </li>
       </ul>
     </section>
@@ -198,57 +227,59 @@
       <h2>Works in Progress</h2>
       <hr>
 
-      <!-- WIP 1 -->
+      <!-- WIP #1 -->
       <p class="paper-title" style="margin-bottom:0;">
-        <a href="https://example.com/FinancialCrises.pdf" target="_blank">
+        <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EavgWBYvxI9BtycqNGUrNp4Bq14p7p13WeVzLS4o1RXhvg?e=rFWgbL" target="_blank">
           Financial Crises and Climate Shocks during the Great Depression: A DSGE Perspective
-        </a> ( <a href="https://example.com/FinancialCrises.pdf" target="_blank">Link</a> )
+        </a> 
+        ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EavgWBYvxI9BtycqNGUrNp4Bq14p7p13WeVzLS4o1RXhvg?e=rFWgbL" target="_blank">Link</a> )
       </p>
-      <button class="accordion">Abstract</button>
+      <button class="accordion"><strong>Abstract</strong></button>
       <div class="panel">
         <p style="margin:0;">
-          This study explores the compound crisis that struck China in the 1930s...
+          This study explores the compound crisis that struck China in the 1930s, fueled by the overlapping impacts of the Great Depression and frequent rare and severe natural disasters. By utilizing a newly constructed annual climate index based on the self-calibrated Palmer Drought Severity Index (scPDSI) and financial crises data from Reinhart and Rogoff (2008, 2009), we identify key periods of compounded disruptions during the Great Depression. 
           <br><br>
-          [完整摘要...]
+          Employing a Dynamic Stochastic General Equilibrium (DSGE) model specifically designed for China’s multi-sector economy under the silver standard, we assess the contributions of external financial shocks and internal climate shocks to macroeconomic fluctuations. Our findings demonstrate that climate shocks had a dominant and lasting impact on agricultural output and GDP, far outweighing the effects of the Great Depression, which primarily affected trade through declining exports and imports. The analysis further uncovers how disruptions in agriculture propagated through other sectors, intensifying economic instability. Counterfactual simulations reveal that modern monetary policies, such as flexible interest rate adjustments, could have mitigated short-term fluctuations but would have required effective fiscal coordination to avoid resource misallocation and maintain agricultural investment. The study highlights the critical role of agriculture as a transmission channel for compound shocks and provides policy insights for modern economies, emphasizing the need for coordinated monetary and fiscal responses to manage overlapping crises.
         </p>
       </div>
 
-      <div class="paper-spacing"></div>
+      <hr>
 
-      <!-- WIP 2 -->
+      <!-- WIP #2 -->
       <p class="paper-title" style="margin-bottom:0;">
-        <a href="https://example.com/ESG.pdf" target="_blank">
+        <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/Ee3O0hiOGfNFmkedniNqBFgBBg_tRuRY472b47wpMDWUPA?e=ds7f71" target="_blank">
           The Nonlinear Impact of ESG on Stock Market Performance among U.S. Manufacturing and Banking Firms
-        </a> ( <a href="https://example.com/ESG.pdf" target="_blank">Link</a> )
+        </a> 
+        ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/Ee3O0hiOGfNFmkedniNqBFgBBg_tRuRY472b47wpMDWUPA?e=ds7f71" target="_blank">Link</a> )
         with ralph sonenshine
       </p>
-      <button class="accordion">Abstract</button>
+      <button class="accordion"><strong>Abstract</strong></button>
       <div class="panel">
         <p style="margin:0;">
-          Investing according to ESG concerns has become popular...
+          Investing according to ESG concerns has become popular and controversial. Companies that score well on ESG concerns may attract socially conscious investors. But do ESG scores collectively and individually impact stock market performance? This paper weighs in on this issue by analyzing the impact that changes in ESG scores have on both the excess stock market returns (alpha) and risk-adjusted returns (Sharpe ratio). We also analyze the differential impact of ESG on financial performance among U.S. manufacturing and banking firms. 
           <br><br>
-          [完整摘要...]
+          Using quantile regression analysis, our results show a nonlinear relationship, characterized by a U-shaped and an inverted-U shaped relationship between ESG ratings and alpha and Sharpe ratios respectively. Moreover, we find significant differences regarding the impact of governance, environmental, and social on excess stock market returns in both industries.
         </p>
       </div>
 
-      <div class="paper-spacing"></div>
+      <hr>
 
-      <!-- WIP 3 -->
+      <!-- WIP #3 -->
       <p class="paper-title" style="margin-bottom:0;">
-        <a href="https://example.com/SilverClimate.pdf" target="_blank">
+        <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/ERNdwr73XStGmseB21nSxF4B2yJQNts4nK-FYWN6niqkkA?e=Afo5pM" target="_blank">
           Silver, Climate, and China’s Price Revolution
-        </a> ( <a href="https://example.com/SilverClimate.pdf" target="_blank">Link</a> )
+        </a> 
+        ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/ERNdwr73XStGmseB21nSxF4B2yJQNts4nK-FYWN6niqkkA?e=Afo5pM" target="_blank">Link</a> )
       </p>
-      <button class="accordion">Abstract</button>
+      <button class="accordion"><strong>Abstract</strong></button>
       <div class="panel">
         <p style="margin:0;">
-          This study examines the price revolution in Qing China (1644–1911), focusing on silver flows...
+          This study examines the price revolution in Qing China (1644–1911), focusing on silver flows, climate shocks, and socio-economic factors in the North China Plain (1736–1911). Using ARDL and NARDL models, the findings reveal strong long-term co-integration among these variables. 
           <br><br>
-          [完整摘要...]
+          Unlike early modern Europe, Qing China's price revolution was not solely driven by monetary expansion but resulted from the interaction between silver inflows and climate variability. Silver supply had a strong long-term positive effect on prices, yet the silver-to-copper ratio exhibited opposing short- and long-run effects, suggesting that liquidity constraints tempered inflation over time. Climate shocks had asymmetric effects, with droughts exerting a persistent upward pressure on prices, while floods and temperature variations primarily affected short-term volatility. Population growth had no significant impact, challenging conventional Malthusian narratives. These findings underscore the necessity of nonlinear models in historical economic analysis and provide a broader framework for understanding how climate and financial shocks shape price dynamics, both in historical contexts and contemporary economies vulnerable to similar risks.
         </p>
       </div>
     </section>
-
   </div>
 
   <script>
