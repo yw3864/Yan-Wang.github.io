@@ -27,30 +27,32 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        /* 将板块标题间距调小一些 */
+        /* 让版块之间更紧凑 */
         h2 {
-            margin-top: 15px;     /* 原先 25px -> 改小以减少上下距离 */
-            margin-bottom: 5px;  /* 调整下边距使标题与hr更紧凑 */
+            margin-top: 10px;   /* 调小顶部外边距 */
+            margin-bottom: 3px; /* 调小底部外边距 */
         }
-        /* 调整 hr 与前后内容的间距 */
         hr {
-            margin-top: 5px;
-            margin-bottom: 10px;
+            margin-top: 3px;    /* 调小hr与前文距离 */
+            margin-bottom: 8px; /* 调小hr与后文距离 */
         }
+
         .paper-title {
             margin: 0;
             font-size: 100%;
             font-weight: bold;
         }
-        .paper-title .title-blue {
-            color: #007bff;  /* 与原链接相同的蓝色 */
+        /* 使用更接近你截图的蓝色：#0366d6 （GitHub常用链接色） */
+        .title-blue {
+            color: #0366d6; 
         }
+
         .accordion {
             background-color: transparent;
             border: none;
             cursor: pointer;
             font-weight: bold;
-            color: #007bff;
+            color: #0366d6;  /* 与标题同色或可略有区别 */
             padding: 3px 0;
             font-size: 90%;
             display: inline-block;
@@ -71,7 +73,7 @@
             display: none;
             margin-top: 5px;
         }
-        /* 合作者链接：普通蓝色且非加粗 */
+        /* 合作者链接：与标题区分，颜色略浅一些可自行调整 */
         a.collab-link {
             color: #0056b3;
             font-weight: normal;
@@ -122,7 +124,8 @@
                 <a href="https://blogs.worldbank.org/en/team/c/christian-schoder" class="collab-link" target="_blank">Christian Schoder</a>
             </p>
             <i>Submitted to The World Bank Research Observer</i>, February 12, 2025
-            ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EUtC70e7bA1AsAEL1wNqH8oBrZr03lMndGrBAd303sKFAg?e=CPrfXx" target="_blank">Link</a> )
+            <br>( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EUtC70e7bA1AsAEL1wNqH8oBrZr03lMndGrBAd303sKFAg?e=CPrfXx" target="_blank">Link</a> )
+            <br>
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
@@ -144,6 +147,7 @@
             ( <a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic" target="_blank">Link</a> ), 
             NBER Working Paper 33485, DOI: 10.3386/w33485, Issue Date: February 2025
             ( <a href="https://www.nber.org/papers/w33485" target="_blank">Link</a> )
+            <br>
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
@@ -165,7 +169,8 @@
             </p>
             <i>The Eighteenth International Conference on Management Science and Engineering Management</i>,
             First Online: August 4, 2024
-            ( <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" target="_blank">Link</a> )
+            <br>( <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" target="_blank">Link</a> )
+            <br>
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
@@ -188,7 +193,7 @@
                 <a href="https://blogs.worldbank.org/en/team/e/erik-feyen" class="collab-link" target="_blank">Erik Feyen</a>,
                 co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the
                 World Bank Group (WBG).
-                ( <a href="https://american0-my.sharepoint.com/:i:/g/personal/yw3864a_american_edu/EfhFm-3FSQ5Ns36Ifrt4-IYBdRENGb1r4K_XMe1GHp1Z4A?e=euzSsp" target="_blank">View Cover</a> )
+                <br>( <a href="https://american0-my.sharepoint.com/:i:/g/personal/yw3864a_american_edu/EfhFm-3FSQ5Ns36Ifrt4-IYBdRENGb1r4K_XMe1GHp1Z4A?e=euzSsp" target="_blank">View Cover</a> )
             </p>
             <ul>
                 <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
@@ -206,6 +211,7 @@
                 <span class="title-blue">Financial Crises and Climate Shocks during the Great Depression: A DSGE Perspective</span>
             </p>
             ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EavgWBYvxI9BtycqNGUrNp4Bq14p7p13WeVzLS4o1RXhvg?e=rFWgbL" target="_blank">Link</a> )
+            <br>
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
@@ -224,6 +230,7 @@
                 </a>
             </p>
             ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/Ee3O0hiOGfNFmkedniNqBFgBBg_tRuRY472b47wpMDWUPA?e=ds7f71" target="_blank">Link</a> )
+            <br>
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
@@ -239,6 +246,7 @@
                 <span class="title-blue">Silver, Climate, and China’s Price Revolution</span>
             </p>
             ( <a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/ERNdwr73XStGmseB21nSxF4B2yJQNts4nK-FYWN6niqkkA?e=Afo5pM" target="_blank">Link</a> )
+            <br>
             <button class="accordion"><strong>Abstract</strong></button>
             <div class="panel">
                 <p>
