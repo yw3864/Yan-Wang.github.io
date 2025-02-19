@@ -1,44 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching & Research Experience</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        h1 {
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .course-title {
-            font-weight: bold;
-            color: #2980b9;
-        }
-        .term {
-            font-style: italic;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <!-- 必要的元信息与样式文件 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Yan Wang's website</title>
+
+  <!-- Styles and Fonts -->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+  <style>
+    /* =========== 页面整体排版及字体 ========== */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    /* 链接颜色 */
+    a {
+      color: #3399CC;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* 页面标题与布局 */
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h3 a {
+  font-weight: bold;
+}
+
+    /* section间不留额外空白 */
+  
+    .papers-section h2 {
+  margin: 0;
+}
+.papers-section .article-group:first-of-type {
+  padding-top: 5px; /* 让第一篇文章与标题之间更分开 */
+}
+    /* section标题样式 */
+    h2 {
+      font-size: 22px;
+      margin: 5px 0;
+      padding-top: 2px;
+      font-weight: bold;
+    }
+    /* 文章组样式：内部 p 标签无外边距 */
+    .article-group p {
+      margin: 0;
+    }
+    /* 每个文章组之间仅留1em空白 */
+    .article-group {
+      margin-bottom: 1em;
+    }
+    /* 文章标题 */
+    .paper-title {
+      font-size: 100%;
+      font-weight: bold;
+    }
+    /* Accordion 手风琴折叠 */
+    button.accordion {
+      background-color: #f8f8f8;
+      font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      padding: 0;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 100%;
+      margin-top: 3px;
+      color: #000;
+      transition: 0.3s;
+    }
+    button.accordion:hover {
+      background-color: #f8f8f8;
+    }
+    /* [ + ] / [ - ] 符号 */
+    button.accordion::before {
+      content: "[+] ";
+      color: #777;
+      font-size: 90%;
+      margin-right: 4px;
+    }
+    button.accordion.active::before {
+      content: "[-] ";
+    }
+    /* Accordion 内容默认隐藏，显示时添加 .show */
+    .panel {
+      background-color: #fff;
+      color: #666;
+      padding: 10px;
+      display: none;
+      margin-top: 3px;
+      font-size: 100%;
+    }
+    .panel.show {
+      display: block !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Yan Wang</h1>
+      <p>Ph.D.in Economics<br>American University</p>
+      
+      <!-- Home链接 -->
+      <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
+      <h3><a href="">Research</a></h3>
+      <h3><a href="">CV</a></h3>
+      <h3><a href="">Projects</a></h3>
+      <h3><a href="">Teaching</a></h3>
+      <h3><a href="">Code</a></h3>
+      <h3><a href="">Personal</a></h3>
+      
+      <b>Social</b><br>
+      <p>
+        <a href="mailto:yw3864a@american.edu" target="_blank">
+          <i class="fa fa-envelope-square"></i> Email
+        </a>
+        <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
+          <i class="ai ai-google-scholar"></i> Scholar
+        </a>
+        <a href="https://github.com/yw3864" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </p>
+      <p>
+        <b>Contact:</b><br>
+        Department of Economics<br>
+        American University<br>
+        4400 Massachusetts Ave NW, Washington, DC 20016
+      </p>
 </head>
 <body>
     <h1>Teaching & Research Experience</h1>
