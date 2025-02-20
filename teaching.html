@@ -39,17 +39,8 @@
       margin: 0 auto;
     }
     h3 a {
-  font-weight: bold;
-}
-
-    /* section间不留额外空白 */
-  
-    .papers-section h2 {
-  margin: 0;
-}
-.papers-section .article-group:first-of-type {
-  padding-top: 5px; /* 让第一篇文章与标题之间更分开 */
-}
+      font-weight: bold;
+    }
     /* section标题样式 */
     h2 {
       font-size: 22px;
@@ -57,57 +48,19 @@
       padding-top: 2px;
       font-weight: bold;
     }
-    /* 文章组样式：内部 p 标签无外边距 */
+    /* 文章组样式 */
     .article-group p {
       margin: 0;
     }
-    /* 每个文章组之间仅留1em空白 */
     .article-group {
       margin-bottom: 1em;
     }
-    /* 文章标题 */
-    .paper-title {
-      font-size: 100%;
+    .course-title {
       font-weight: bold;
+      color: #2980b9;
     }
-    /* Accordion 手风琴折叠 */
-    button.accordion {
-      background-color: #f8f8f8;
-      font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      margin-top: 3px;
-      color: #000;
-      transition: 0.3s;
-    }
-    button.accordion:hover {
-      background-color: #f8f8f8;
-    }
-    /* [ + ] / [ - ] 符号 */
-    button.accordion::before {
-      content: "[+] ";
-      color: #777;
-      font-size: 90%;
-      margin-right: 4px;
-    }
-    button.accordion.active::before {
-      content: "[-] ";
-    }
-    /* Accordion 内容默认隐藏，显示时添加 .show */
-    .panel {
-      background-color: #fff;
-      color: #666;
-      padding: 10px;
-      display: none;
-      margin-top: 3px;
-      font-size: 100%;
-    }
-    .panel.show {
-      display: block !important;
+    .term {
+      font-style: italic;
     }
   </style>
 </head>
@@ -116,17 +69,17 @@
   <div class="wrapper">
     <header>
       <h1>Yan Wang</h1>
-      <p>Ph.D.in Economics<br>American University</p>
-      
+      <p>Ph.D. in Economics<br>American University</p>
+
       <!-- Home链接 -->
       <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
-      <h3><a href="">Research</a></h3>
-      <h3><a href="">CV</a></h3>
-      <h3><a href="">Projects</a></h3>
-      <h3><a href="">Teaching</a></h3>
-      <h3><a href="">Code</a></h3>
-      <h3><a href="">Personal</a></h3>
-      
+      <h3><a href="#">Research</a></h3>
+      <h3><a href="#">CV</a></h3>
+      <h3><a href="#">Projects</a></h3>
+      <h3><a href="#">Teaching</a></h3>
+      <h3><a href="#">Code</a></h3>
+      <h3><a href="#">Personal</a></h3>
+
       <b>Social</b><br>
       <p>
         <a href="mailto:yw3864a@american.edu" target="_blank">
@@ -145,8 +98,8 @@
         American University<br>
         4400 Massachusetts Ave NW, Washington, DC 20016
       </p>
-</head>
-<body>
+    </header>
+
     <h1>Teaching & Research Experience</h1>
 
     <h2>Teaching Assistant Experience</h2>
@@ -168,7 +121,7 @@
             Provided assistance in topics covering labor markets, wage determination, and employment policies.</li>
         <li><span class="course-title">Senior Policy Analysis Seminar (ECON-478)</span> – <span class="term">Spring 2021</span><br>
             Assisted students in conducting policy analysis projects, focusing on empirical methods and data interpretation.</li>
-              <li><span class="course-title">International Economics: Trade (ECON-371 / ECON-671)</span> – <span class="term">Spring 2021, Fall 2021, Fall 2023</span><br>
+        <li><span class="course-title">International Economics: Trade (ECON-371 / ECON-671)</span> – <span class="term">Spring 2021, Fall 2021, Fall 2023</span><br>
             Supported both undergraduate and graduate courses on international trade theory and policy analysis.</li>
         <li><span class="course-title">Growing Artificial Societies (ECON-450)</span> – <span class="term">Summer 2018</span><br>
             Supported students in understanding agent-based modeling and its applications in economic analysis.</li>
@@ -177,7 +130,7 @@
     <h2>Research Assistant Experience</h2>
     <p><strong>Department of Economics, American University</strong></p>
     <ul>
-        <li><strong>Supervised by Prof. Blecker, Robert</strong> – <span class="term">Fall 2019 – Spring 2020</span><br>
+        <li><strong>Supervised by Prof. Robert Blecker</strong> – <span class="term">Fall 2019 – Spring 2020</span><br>
             Contributed to the research project:<br>
             <a href="https://www.boeckler.de/de/faust-detail.htm?sync_id=HBS-008240" target="_blank">Setterfield, Mark; Blecker, Robert A. (2022): Structural change in the US Phillips curve, 1948-2021: the role of power and institutions</a>
         </li>
@@ -185,6 +138,7 @@
             Conducted historical economic data analysis and supported macroeconomic research projects.
         </li>
     </ul>
+
+  </div>
 </body>
 </html>
-
