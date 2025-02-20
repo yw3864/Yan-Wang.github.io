@@ -1,63 +1,200 @@
-/* 解决标题重叠和导航栏错位 */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 20px;
-  padding: 0;
-  background-color: #fff;
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- 必要的元信息与样式文件 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Yan Wang's website</title>
+
+  <!-- Styles and Fonts -->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+  <style>
+    /* =========== 页面整体排版及字体 ========== */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    /* 链接颜色 */
+    a {
+      color: #3399CC;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* 页面标题与布局 */
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h3 a {
+  font-weight: bold;
 }
 
-/* 修正标题间距 */
-h1, h2, h3 {
-  margin: 20px 0 10px 0;
-  padding: 0;
-  clear: both;
+    /* section间不留额外空白 */
+  
+    .teaching-section h2 {
+  margin: 0;
 }
+.papers-section .article-group:first-of-type {
+  padding-top: 5px; /* 让第一篇文章与标题之间更分开 */
+}
+    /* section标题样式 */
+    h2 {
+      font-size: 22px;
+      margin: 5px 0;
+      padding-top: 2px;
+      font-weight: bold;
+    }
+    /* 文章组样式：内部 p 标签无外边距 */
+    .article-group p {
+      margin: 0;
+    }
+    /* 每个文章组之间仅留1em空白 */
+    .article-group {
+      margin-bottom: 1em;
+    }
+    /* 文章标题 */
+    .paper-title {
+      font-size: 100%;
+      font-weight: bold;
+    }
+    /* Accordion 手风琴折叠 */
+    button.accordion {
+      background-color: #f8f8f8;
+      font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      padding: 0;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 100%;
+      margin-top: 3px;
+      color: #000;
+      transition: 0.3s;
+    }
+    button.accordion:hover {
+      background-color: #f8f8f8;
+    }
+    /* [ + ] / [ - ] 符号 */
+    button.accordion::before {
+      content: "[+] ";
+      color: #777;
+      font-size: 90%;
+      margin-right: 4px;
+    }
+    button.accordion.active::before {
+      content: "[-] ";
+    }
+    /* Accordion 内容默认隐藏，显示时添加 .show */
+    .panel {
+      background-color: #fff;
+      color: #666;
+      padding: 10px;
+      display: none;
+      margin-top: 3px;
+      font-size: 100%;
+    }
+    .panel.show {
+      display: block !important;
+    }
+  </style>
+</head>
 
-/* 导航栏样式 */
-header h3 {
-  margin: 5px 0;
-}
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Yan Wang</h1>
+      <p>Ph.D.in Economics<br>American University</p>
+      
+      <!-- Home链接 -->
+      <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
+      <h3><a href="">Research</a></h3>
+      <h3><a href="">CV</a></h3>
+      <h3><a href="">Projects</a></h3>
+      <h3><a href="">Teaching</a></h3>
+      <h3><a href="">Code</a></h3>
+      <h3><a href="">Personal</a></h3>
+      
+      <b>Social</b><br>
+      <p>
+        <a href="mailto:yw3864a@american.edu" target="_blank">
+          <i class="fa fa-envelope-square"></i> Email
+        </a>
+        <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
+          <i class="ai ai-google-scholar"></i> Scholar
+        </a>
+        <a href="https://github.com/yw3864" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </p>
+      <p>
+        <b>Contact:</b><br>
+        Department of Economics<br>
+        American University<br>
+        4400 Massachusetts Ave NW, Washington, DC 20016
+      </p>
+    </header>
 
-header h3 a {
-  display: block;
-  color: #3399CC;
-  text-decoration: none;
-}
+ <!-- Teaching Section -->
+<section class="teaching-section">
+  <h2><strong>Teaching Assistant Experience</strong></h2>
+  <p><strong>Department of Economics, American University</strong></p>
+  <ul>
+    <li><span class="course-title">Applied Econometrics II (ECON-424 / ECON-624)</span> – <span class="term">Fall 2022, Spring 2023, Fall 2021, Spring 2022, Spring 2024</span></li>
+    <li><span class="course-title">Applied Econometrics I (ECON-322 / ECON-623)</span> – <span class="term">Fall 2021, Spring 2022</span></li>
+    <li><span class="course-title">Economic Inequality (ECON-396)</span> – <span class="term">Spring 2021</span></li>
+    <li><span class="course-title">Money, Banking & Finance (ECON-332)</span> – <span class="term">Spring 2023</span></li>
+    <li><span class="course-title">Finance, Stability, and Growth (ECON-632)</span> – <span class="term">Spring 2023</span></li>
+    <li><span class="course-title">Economics MA Capstone Seminar (ECON-680)</span> – <span class="term">Fall 2023</span></li>
+    <li><span class="course-title">Labor Economics (ECON-373)</span> – <span class="term">Spring 2022</span></li>
+    <li><span class="course-title">Senior Policy Analysis Seminar (ECON-478)</span> – <span class="term">Spring 2021</span></li>
+    <li><span class="course-title">International Economics: Trade (ECON-371 / ECON-671)</span> – <span class="term">Spring 2021, Fall 2021, Fall 2023</span></li>
+    <li><span class="course-title">Growing Artificial Societies (ECON-450)</span> – <span class="term">Summer 2018</span></li>
+  </ul>
+</section>
 
-header h3 a:hover {
-  text-decoration: underline;
-}
+<!-- Research Assistant Section -->
+<section class="research-section">
+  <h2><strong>Research Assistant Experience</strong></h2>
+  <p><strong>Department of Economics, American University</strong></p>
+  <ul>
+    <li><strong>Supervised by Prof. Robert Blecker</strong> – <span class="term">Fall 2019 – Spring 2020</span><br>
+      <a href="https://www.boeckler.de/de/faust-detail.htm?sync_id=HBS-008240" target="_blank">
+        Setterfield, Mark; Blecker, Robert A. (2022): Structural change in the US Phillips curve, 1948-2021: the role of power and institutions
+      </a>
+    </li>
+    <li><strong>Supervised by Prof. Gabriel Mathy</strong> – <span class="term">Fall 2019 – Spring 2020</span></li>
+  </ul>
+</section>
 
-/* 防止内容重叠 */
-.wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden; /* 确保内部元素不会溢出 */
-}
+  </div>
 
-/* 链接颜色 */
-a {
-  color: #3399CC;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* 解决重叠的额外设置 */
-header, h1, h2, h3, p, ul, li {
-  position: relative;
-  z-index: 1;
-}
-
-/* 确保内容与边距的间距 */
-p, ul {
-  margin: 10px 0;
-}
-
-/* 调整社交链接样式 */
-p a i {
-  margin-right: 5px;
-}
+  <script>
+    // Accordion 折叠功能：点击后切换摘要显示状态
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.classList.contains("show")) {
+            panel.classList.remove("show");
+          } else {
+            panel.classList.add("show");
+          }
+      });
+    }
+  </script>
+</body>
+</html>
