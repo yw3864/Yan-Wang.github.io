@@ -1,69 +1,102 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <!-- 必要的元信息与样式文件 -->
+  <!-- Correct Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Yan Wang's website</title>
 
-  <!-- Styles and Fonts -->
   <link rel="stylesheet" href="stylesheets/styles.css">
   <link rel="stylesheet" href="stylesheets/github-light.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
+  <!-- Ensure Academicons is loaded properly -->
+  <link rel="stylesheet" href="assets/css/academicons.min.css" />
+
   <style>
-    /* =========== 页面整体排版及字体 ========== */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       margin: 20px;
     }
-    /* 链接颜色 */
-    a {
-      color: #3399CC;
-      text-decoration: none;
+
+    section {
+      margin: 0;
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    /* 页面标题与布局 */
+
     h1 {
       font-size: 36px;
       margin-bottom: 10px;
     }
+
     .wrapper {
       max-width: 900px;
       margin: 0 auto;
     }
-    /* section间不留额外空白 */
-  
-    .papers-section h2 {
-  margin: 1px 0;
-}
 
-    /* section标题样式 */
-    h2 {
-      margin: 5px 0;
-      padding-top: 2px;
+    /* 将导航链接加粗 */
+    h3 a {
       font-weight: bold;
     }
-    /* 文章组样式：内部 p 标签无外边距 */
+
+    .social-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .two-column {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -40px;
+    }
+
+    .two-column .column {
+      width: 45%;
+    }
+
+    .column ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .column ul li {
+      margin-bottom: 10px;
+    }
+
+    .education-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .education-list li {
+      margin-bottom: 15px;
+    }
+
+    .education-list li span {
+      display: block;
+    }
+
+    .papers-section h2 {
+      margin: 1px 0;
+    }
+
     .article-group p {
       margin: 0;
     }
-    /* 每个文章组之间仅留1em空白 */
+
     .article-group {
       margin-bottom: 1em;
     }
-    /* 文章标题 */
+
     .paper-title {
       font-size: 100%;
       font-weight: bold;
     }
-    /* Accordion 手风琴折叠 */
+
     button.accordion {
       background-color: #f8f8f8;
       font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -77,20 +110,22 @@
       color: #000;
       transition: 0.3s;
     }
+
     button.accordion:hover {
       background-color: #f8f8f8;
     }
-    /* [ + ] / [ - ] 符号 */
+
     button.accordion::before {
       content: "[+] ";
       color: #777;
       font-size: 90%;
       margin-right: 4px;
     }
+
     button.accordion.active::before {
       content: "[-] ";
     }
-    /* Accordion 内容默认隐藏，显示时添加 .show */
+
     .panel {
       background-color: #fff;
       color: #666;
@@ -99,8 +134,18 @@
       margin-top: 3px;
       font-size: 100%;
     }
+
     .panel.show {
       display: block !important;
+    }
+
+    .social-row a {
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .social-row a:last-child {
+      margin-right: 0;
     }
   </style>
 </head>
@@ -109,43 +154,78 @@
   <div class="wrapper">
     <header>
       <h1>Yan Wang</h1>
-      <p>Ph.D.in Economics<br>American University</p>
-      
-      <!-- Home链接 -->
-      <h3><a href=">Home</a></h3>
-      <h3><a href="">Research</a></h3>
-      <h3><a href="">CV</a></h3>
+      <p>Ph.D. in Economics<br>American University</p>
+
+      <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
+      <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
+      <h3><a href="https://drive.google.com/file/d/1BYjCYvu5Na9bc5OuW8tsQzZ0BNmPqeUF/view?usp=sharing">CV</a></h3>
       <h3><a href="https://yanwangecon.com/Projects.html">Projects</a></h3>
-      <h3><a href="">Teaching</a></h3>
-      <h3><a href="">Code</a></h3>
-      <h3><a href="">Personal</a></h3>
-      
-<b>Social</b><br> 
-<p>
-  <a href="mailto:yw3864a@american.edu" target="_blank">
-    <i class="fa fa-envelope-square"></i> Email
-  </a>
-  <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
-    <i class="ai ai-google-scholar-square"></i> Scholar
-  </a>
-  <a href="https://github.com/yw3864" target="_blank">
-    <i class="fab fa-github"></i> GitHub
-  </a>
-</p>
-<p>
-  <b>Contact:</b><br>
-  Department of Economics<br>
-  American University<br>
-  4400 Massachusetts Ave NW, Washington, DC 20016
-</p>
+      <h3><a href="https://yanwangecon.com/teaching.html">Teaching</a></h3>
+      <h3><a href="https://yanwangecon.com/code.html">Code</a></h3>
+      <h3><a href="https://yanwangecon.com/personal.html">Personal</a></h3>
 
-      
-      </header>
-      <section>
-      <!-- <h2>Projects</h2> -->
+      <b>Social</b><br>
+      <p>
+        <a href="mailto:yw3864a@american.edu" target="_blank">
+          <i class="fa fa-envelope-square"></i> Email
+        </a>
+        <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
+          <i class="ai ai-google-scholar-square"></i> Scholar
+        </a>
+        <a href="https://github.com/yw3864" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </p>
+      <p>
+        <b>Contact:</b><br>
+        Department of Economics<br>
+        American University<br>
+        4400 Massachusetts Ave NW, Washington, DC 20016
+      </p>
+    </header>
 
- </section>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+    <!-- Projects Section -->
+    <section class="projects-section">
+      <h2><strong>Projects</strong></h2>
+      <div class="article-group">
+        <p class="paper-title">
+          <a href="https://www.policyuncertainty.com/china_monthly.html" target="_blank">
+            China Economic Policy Uncertainty Project
+          </a>
+        </p>
+        <p><i>May 2022 – January 2025</i></p>
+        <ul>
+          <li>Managed a Python-based web scraping framework to acquire data from key mainland Chinese newspapers, including People's Daily and Guangming Daily. Successfully scraped and analyzed over 10,000 articles, leading to a more robust data set.</li>
+          <li>Maintained the Economic Policy Uncertainty (EPU) Index for China, providing in-depth monthly reports.</li>
+        </ul>
+
+        <!-- EPU Graph -->
+        <h3>Economic Policy Uncertainty (EPU) Index</h3>
+        <img src="https://github.com/yw3864/Yan-Wang.github.io/blob/master/EPU.png" alt="EPU Index" style="max-width:100%; height:auto;">
+
+        <!-- TPU Graph -->
+        <h3>Trade Policy Uncertainty (TPU) Index</h3>
+        <img src="https://github.com/yw3864/Yan-Wang.github.io/blob/master/TPU.png" alt="TPU Index" style="max-width:100%; height:auto;">
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Accordion 折叠功能：点击后切换摘要显示状态
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.classList.contains("show")) {
+          panel.classList.remove("show");
+        } else {
+          panel.classList.add("show");
+        }
+      });
+    }
+  </script>
+</body>
+
 </html>
