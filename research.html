@@ -16,99 +16,40 @@
 
   <style>
     /* =========== 页面整体排版及字体 ========== */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-    }
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
     /* 链接颜色 */
-    a {
-      color: #3399CC;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: #3399CC; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     /* 页面标题与布局 */
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    .wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    h3 a {
-  font-weight: bold;
-}
+    h1 { font-size: 36px; margin-bottom: 10px; }
+    .wrapper { max-width: 900px; margin: 0 auto; }
+    h3 a { font-weight: bold; }
 
     /* section间不留额外空白 */
-  
-    .papers-section h2 {
-  margin: 0;
-}
-.papers-section .article-group:first-of-type {
-  padding-top: 5px; /* 让第一篇文章与标题之间更分开 */
-}
+    .papers-section h2 { margin: 0; }
+    .papers-section .article-group:first-of-type { padding-top: 5px; }
     /* section标题样式 */
-    h2 {
-      font-size: 22px;
-      margin: 5px 0;
-      padding-top: 2px;
-      font-weight: bold;
-    }
+    h2 { font-size: 22px; margin: 5px 0; padding-top: 2px; font-weight: bold; }
     /* 文章组样式：内部 p 标签无外边距 */
-    .article-group p {
-      margin: 0;
-    }
+    .article-group p { margin: 0; }
     /* 每个文章组之间仅留1em空白 */
-    .article-group {
-      margin-bottom: 1em;
-    }
+    .article-group { margin-bottom: 1em; }
     /* 文章标题 */
-    .paper-title {
-      font-size: 100%;
-      font-weight: bold;
-    }
+    .paper-title { font-size: 100%; font-weight: bold; }
     /* Accordion 手风琴折叠 */
     button.accordion {
       background-color: #f8f8f8;
       font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      margin-top: 3px;
-      color: #000;
-      transition: 0.3s;
+      cursor: pointer; padding: 0; border: none; text-align: left; outline: none;
+      font-size: 100%; margin-top: 3px; color: #000; transition: 0.3s;
     }
-    button.accordion:hover {
-      background-color: #f8f8f8;
-    }
+    button.accordion:hover { background-color: #f8f8f8; }
     /* [ + ] / [ - ] 符号 */
-    button.accordion::before {
-      content: "[+] ";
-      color: #777;
-      font-size: 90%;
-      margin-right: 4px;
-    }
-    button.accordion.active::before {
-      content: "[-] ";
-    }
+    button.accordion::before { content: "[+] "; color: #777; font-size: 90%; margin-right: 4px; }
+    button.accordion.active::before { content: "[-] "; }
     /* Accordion 内容默认隐藏，显示时添加 .show */
-    .panel {
-      background-color: #fff;
-      color: #666;
-      padding: 10px;
-      display: none;
-      margin-top: 3px;
-      font-size: 100%;
-    }
-    .panel.show {
-      display: block !important;
-    }
+    .panel { background-color: #fff; color: #666; padding: 10px; display: none; margin-top: 3px; font-size: 100%; }
+    .panel.show { display: block !important; }
   </style>
 </head>
 
@@ -117,27 +58,21 @@
     <header>
       <h1>Yan Wang</h1>
       <p>Ph.D.in Economics<br>American University</p>
-      
+
       <!-- Home链接 -->
-  <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
-        <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
-        <h3><a href="https://drive.google.com/file/d/1BYjCYvu5Na9bc5OuW8tsQzZ0BNmPqeUF/view?usp=sharing">CV</a></h3>  
-        <h3><a href="https://yanwangecon.com/Projects.html">Projects</a></h3>  
-        <h3><a href="https://yanwangecon.com/teaching.html">Teaching</a></h3> 
-        <h3><a href="https://yanwangecon.com/code.html">Code</a></h3> 
-        <h3><a href="https://yanwangecon.com/personal.html">Personal</a></h3>
-      
+      <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
+      <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
+      <h3><a href="https://drive.google.com/file/d/1BYjCYvu5Na9bc5OuW8tsQzZ0BNmPqeUF/view?usp=sharing">CV</a></h3>
+      <h3><a href="https://yanwangecon.com/Projects.html">Projects</a></h3>
+      <h3><a href="https://yanwangecon.com/teaching.html">Teaching</a></h3>
+      <h3><a href="https://yanwangecon.com/code.html">Code</a></h3>
+      <h3><a href="https://yanwangecon.com/personal.html">Personal</a></h3>
+
       <b>Social</b><br>
       <p>
-        <a href="mailto:yw3864a@american.edu" target="_blank">
-          <i class="fa fa-envelope-square"></i> Email
-        </a>
-        <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
-          <i class="ai ai-google-scholar"></i> Scholar
-        </a>
-        <a href="https://github.com/yw3864" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
+        <a href="mailto:yw3864a@american.edu" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+        <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
+        <a href="https://github.com/yw3864" target="_blank"><i class="fab fa-github"></i> GitHub</a>
       </p>
       <p>
         <b>Contact:</b><br>
@@ -148,9 +83,9 @@
     </header>
 
     <!-- Working Papers -->
-   <section class="papers-section">
+    <section class="papers-section">
       <h2><strong>Working Papers</strong></h2>
-      
+
       <div class="article-group">
         <!-- Paper 1 -->
         <p class="paper-title">
@@ -167,40 +102,38 @@
           </p>
         </div>
       </div>
-      
-      <div class="article-group">
-  <!-- Paper 2 -->
-  <p class="paper-title">
-    <a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic" target="_blank">
-      Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
-    </a>
-  </p>
-  <p>
-    with
-    <a href="https://siepr.stanford.edu/people/steven-davis" target="_blank">Steven J. Davis</a>,
-    <a href="https://www.american.edu/cas/faculty/dl5165a.cfm" target="_blank">Dingqian Liu</a>,
-    <a href="https://www.american.edu/cas/faculty/sheng.cfm" target="_blank">Xuguang Simon Sheng</a>
-  </p>
-  <p>
-    <i>Stanford University, Hoover Institution, Economics Working Paper No. 25102; National Bureau of Economic Research (NBER), Working Paper No. 33485, February 2025.</i>
-    <br>
-    <i>Submitted to the Review of Asset Pricing Studies</i>
-  </p>
-  <button type="button" class="accordion"><strong>Abstract</strong></button>
-  <div class="panel">
-    <p>
-      China’s stock market greatly outperformed other national markets during the first several months of the COVID-19 pandemic, and it did so even before it became evident that early containment efforts would flounder in the United States and many other countries. One explanation is that aggressive monetary and credit easing propped up Chinese equity values. To assess this view, we consider several interventions that eased monetary and credit conditions in the first six months of 2020. Our analysis finds clear evidence that these interventions raised implied stock market volatility, but little evidence that they influenced stock price levels. We also examine policy actions that restricted short selling, limited stock sales, and boosted stock purchases. These measures to raise net equity demand were small in scale and highly time-limited, suggesting that any direct effects on stock prices were also modest. Neither our study nor other known work provides a ready explanation for the extraordinary performance of China’s stock market in the first half of 2020. This performance is even more striking in hindsight, given later developments in China’s economy and stock market.
-    </p>
-  </div>
-</div>
 
- 
+      <div class="article-group">
+        <!-- Paper 2 -->
+        <p class="paper-title">
+          <a href="https://www.hoover.org/research/policy-interventions-and-chinas-stock-market-early-stages-covid-19-pandemic" target="_blank">
+            Policy Interventions and China’s Stock Market in the Early Stages of the COVID-19 Pandemic
+          </a>
+        </p>
+        <p>
+          with
+          <a href="https://siepr.stanford.edu/people/steven-davis" target="_blank">Steven J. Davis</a>,
+          <a href="https://www.american.edu/cas/faculty/dl5165a.cfm" target="_blank">Dingqian Liu</a>,
+          <a href="https://www.american.edu/cas/faculty/sheng.cfm" target="_blank">Xuguang Simon Sheng</a>
+        </p>
+        <p>
+          <i>Stanford University, Hoover Institution, Economics Working Paper No. 25102; National Bureau of Economic Research (NBER), Working Paper No. 33485, February 2025.</i><br>
+          <i>Submitted to the Review of Asset Pricing Studies</i>
+        </p>
+        <button type="button" class="accordion"><strong>Abstract</strong></button>
+        <div class="panel">
+          <p>
+            China’s stock market greatly outperformed other national markets during the first several months of the COVID-19 pandemic, and it did so even before it became evident that early containment efforts would flounder in the United States and many other countries. One explanation is that aggressive monetary and credit easing propped up Chinese equity values. To assess this view, we consider several interventions that eased monetary and credit conditions in the first six months of 2020. Our analysis finds clear evidence that these interventions raised implied stock market volatility, but little evidence that they influenced stock price levels. We also examine policy actions that restricted short selling, limited stock sales, and boosted stock purchases. These measures to raise net equity demand were small in scale and highly time-limited, suggesting that any direct effects on stock prices were also modest. Neither our study nor other known work provides a ready explanation for the extraordinary performance of China’s stock market in the first half of 2020. This performance is even more striking in hindsight, given later developments in China’s economy and stock market.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Published & Forthcoming Papers -->
-     <section class="papers-section">
+    <section class="papers-section">
       <h2><strong>Published &amp; Forthcoming Papers</strong></h2>
-<div class="article-group">
-        <!-- WIP #2 -->
+
+      <div class="article-group">
         <p class="paper-title">
           <a href="https://www.mdpi.com/1911-8074/18/11/599" target="_blank">
             Non-Linear Impact of Environmental, Social, and Governance Scores on Deal Premiums
@@ -216,9 +149,7 @@
         </div>
       </div>
 
-
-<div class="article-group">
-        <!-- WIP #2 -->
+      <div class="article-group">
         <p class="paper-title">
           <a href="https://www.mdpi.com/1911-8074/18/6/293" target="_blank">
             The Nonlinear Impact of ESG on Stock Market Performance among U.S. Manufacturing and Banking Firms
@@ -235,7 +166,6 @@
       </div>
 
       <div class="article-group">
-        <!-- Evolutionary Game Theory -->
         <p class="paper-title">
           <a href="https://link.springer.com/chapter/10.1007/978-981-97-5098-6_28" target="_blank">
             An Evolutionary Game Theory Model for Chinese Laggard Firms Technology Catching up
@@ -250,29 +180,12 @@
           </p>
         </div>
       </div>
-      <hr>
-  
-
-    <!-- Macro-Financial Review -->
-   <section class="papers-section">
-      <h2><strong>Macro-Financial Review</strong></h2>
-      
-      <div class="article-group">
-        <p>
-          As a core member of the <strong>Macro-Financial Review</strong> team under the leadership of <a href="https://blogs.worldbank.org/team/n/norbert-fiess" target="_blank">Norbert Fiess</a> and <a href="https://www.worldbank.org/en/about/people/e/erik-feyen" target="_blank">Erik Feyen</a>, co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG).
-        </p>
-        <ul style="margin:3px 0;">
-          <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
-          <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).</li>
-        </ul>
-      </div>
-      <hr>
-
+    </section>
 
     <!-- Works in Progress -->
-   <section class="papers-section">
+    <section class="papers-section">
       <h2><strong>Works in Progress</strong></h2>
-      
+
       <div class="article-group">
         <!-- WIP #1 -->
         <p class="paper-title">
@@ -287,9 +200,7 @@
           </p>
         </div>
       </div>
-      
-      
-      
+
       <div class="article-group">
         <!-- WIP #3 -->
         <p class="paper-title">
@@ -304,7 +215,7 @@
           </p>
         </div>
       </div>
-      
+
       <div class="article-group">
         <!-- WIP #4 -->
         <p class="paper-title">
@@ -319,8 +230,37 @@
           </p>
         </div>
       </div>
-      <!-- 最后一个 section 末尾不添加 hr -->
     </section>
+
+    <!-- World Bank Reports（放在页面最后，先 EAP EU，后 MFR） -->
+    <section class="papers-section">
+      <h2><strong>World Bank Reports</strong></h2>
+
+      <!-- East Asia & Pacific Economic Update 置于首位 -->
+      <div class="article-group">
+        <p class="paper-title">East Asia &amp; Pacific Economic Update</p>
+        <p>World Bank, October 2025 (with the East Asia and Pacific Chief Economist Team).</p>
+        <p>
+          <a href="https://openknowledge.worldbank.org/collections/892c8eb3-e78d-5012-875b-98af1149d8a8" target="_blank">Link</a>
+        </p>
+      </div>
+
+      <!-- Macro-Financial Review 紧随其后 -->
+      <div class="article-group">
+        <p class="paper-title">Macro-Financial Review</p>
+        <p>
+          As a core member of the <strong>Macro-Financial Review</strong> team under the leadership of
+          <a href="https://blogs.worldbank.org/team/n/norbert-fiess" target="_blank">Norbert Fiess</a>
+          and <a href="https://www.worldbank.org/en/about/people/e/erik-feyen" target="_blank">Erik Feyen</a>,
+          co-authored sections of the <i>Macro-Financial Review</i>, a semi-annual internal publication of the World Bank Group (WBG).
+        </p>
+        <ul style="margin:3px 0;">
+          <li><strong>Macro-Financial Review, Third Issue (April 2018)</strong>: Co-authored sections analyzing macro-financial risks in 44 countries (<i>pp. 11-48</i>).</li>
+          <li><strong>Macro-Financial Review, Fourth Issue (October 2018)</strong>: Co-authored sections on macro-financial risks (<i>pp. 17-44</i>), including a special topic on blockchain applications and use cases (<i>pp. 80-89</i>).</li>
+        </ul>
+      </div>
+    </section>
+
   </div>
 
   <script>
@@ -328,13 +268,13 @@
     var acc = document.getElementsByClassName("accordion");
     for (var i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.classList.contains("show")) {
-            panel.classList.remove("show");
-          } else {
-            panel.classList.add("show");
-          }
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.classList.contains("show")) {
+          panel.classList.remove("show");
+        } else {
+          panel.classList.add("show");
+        }
       });
     }
   </script>
