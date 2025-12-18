@@ -44,14 +44,14 @@
       .social-row {
         display: flex;
         justify-content: space-between;
-        align-items: center; /* Ensures icons and text are aligned */
+        align-items: center;
       }
 
-      /* 两栏部分：将 margin-top 进一步减小 */
+      /* 两栏部分（保持你原来的设置） */
       .two-column {
         display: flex;
         justify-content: space-between;
-        margin-top: -40px;  /* 原来是 -30px，现在进一步上移 */
+        margin-top: -40px;
       }
 
       .two-column .column {
@@ -59,8 +59,8 @@
       }
 
       .column ul {
-        list-style-type: none; /* Removes the bullet points */
-        padding-left: 0; /* Adjust padding */
+        list-style-type: none;
+        padding-left: 0;
       }
 
       .column ul li {
@@ -68,8 +68,8 @@
       }
 
       .education-list {
-        list-style-type: none; /* Ensures bullet points are removed */
-        padding-left: 0; /* Adjust padding */
+        list-style-type: none;
+        padding-left: 0;
       }
 
       .education-list li {
@@ -80,7 +80,6 @@
         display: block;
       }
 
-      /* 关于 section 内部的其他样式保持不变 */
       .papers-section h2 {
         margin: 1px 0;
       }
@@ -88,13 +87,16 @@
       .article-group p {
         margin: 0;
       }
+
       .article-group {
         margin-bottom: 1em;
       }
+
       .paper-title {
         font-size: 100%;
         font-weight: bold;
       }
+
       button.accordion {
         background-color: #f8f8f8;
         font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -108,18 +110,22 @@
         color: #000;
         transition: 0.3s;
       }
+
       button.accordion:hover {
         background-color: #f8f8f8;
       }
+
       button.accordion::before {
         content: "[+] ";
         color: #777;
         font-size: 90%;
         margin-right: 4px;
       }
+
       button.accordion.active::before {
         content: "[-] ";
       }
+
       .panel {
         background-color: #fff;
         color: #666;
@@ -128,13 +134,19 @@
         margin-top: 3px;
         font-size: 100%;
       }
+
       .panel.show {
         display: block !important;
       }
-      
-      /* 将 About Me 部分上移更多 */
+
+      /* ✅ 关键修改 1：明确 header 和正文分隔 */
+      header {
+        margin-bottom: 20px;
+      }
+
+      /* ✅ 关键修改 2：About Me 不再上移 */
       .about-me {
-        margin-top: -30px;  /* 由 -20px 改为 -30px */
+        margin-top: 10px;
       }
     </style>
   </head>
@@ -143,42 +155,29 @@
     <div class="wrapper">
       <header>
         <h1>Yan Wang</h1>
-        <p>Ph.D.in Economics<br>American University</p>
+        <p>Ph.D. in Economics<br>American University</p>
         
-         <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
+        <h3><a href="https://yw3864.github.io/Yan-Wang.github.io/">Home</a></h3>
         <h3><a href="https://yanwangecon.com/research.html">Research</a></h3>
-
         <h3><a href="https://yanwangecon.com/Projects.html">Projects</a></h3>  
         <h3><a href="https://yanwangecon.com/teaching.html">Teaching</a></h3> 
-       <h3><a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EVFSB2tqTalMkh0OBN7Ds80BXwUC11booqqNNAi7hiRF2Q?e=NPcEc9">CV</a></h3>  
+        <h3><a href="https://american0-my.sharepoint.com/:b:/g/personal/yw3864a_american_edu/EVFSB2tqTalMkh0OBN7Ds80BXwUC11booqqNNAi7hiRF2Q?e=NPcEc9">CV</a></h3>  
         <h3><a href="https://yanwangecon.com/personal.html">Personal</a></h3>
-        <style>
-          .social-row a {
-            display: inline-block;
-            margin-right: 8px;
-          }
-          .social-row a:last-child {
-            margin-right: 0;
-          }
-        </style>
 
         <p>
-  <a href="mailto:yw3864a@american.edu" target="_blank">
-    <i class="fa fa-envelope-square"></i> Email
-  </a>
-
-  <a href="https://www.linkedin.com/in/yanwang-econ/" target="_blank">
-    <i class="fab fa-linkedin"></i> LinkedIn
-  </a>
-
-  <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
-    <i class="ai ai-google-scholar-square"></i> Scholar
-  </a>
-
-  <a href="https://github.com/yw3864" target="_blank">
-    <i class="fab fa-github"></i> GitHub
-  </a>
-</p>
+          <a href="mailto:yw3864a@american.edu" target="_blank">
+            <i class="fa fa-envelope-square"></i> Email
+          </a>
+          <a href="https://www.linkedin.com/in/yanwang-econ/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
+            <i class="ai ai-google-scholar-square"></i> Scholar
+          </a>
+          <a href="https://github.com/yw3864" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </p>
 
         <p>
           <b>Contact:</b><br>
@@ -188,20 +187,18 @@
         </p>
       </header>
 
+      <!-- About Me Section -->
+      <section class="about-me">
+        <h2 style="font-weight: bold;">About Me</h2>
+        <p>
+          I enjoy table tennis (a big fan of Sun Yingsha and Wang Chuqin), tennis, and music. 
+          My playlist often rotates between Debussy and Chopin on one side, and Faye Wong, Dou Wei, Cui Jian, 
+          Lo Ta-yu and Lisa Ono on the other. I’m also drawn to painting, visual arts, and anything that sparks creativity—
+          including discovering new places through travel. I’m from Panzhihua, Sichuan, China, home to the Ertan Hydropower Station—
+          one of China’s major hydroelectric dams built on the Yalong River.
+        </p>
+      </section>
 
-<!-- About Me Section -->
-
-
-<!-- About Me Section -->
-<section class="about-me">
-  <h2 style="font-weight: bold;">About Me</h2>
-  
-  <p>
-  I enjoy table tennis (a big fan of Sun Yingsha and Wang Chuqin), tennis, and music. My playlist often rotates between Debussy and Chopin on one side, and Faye Wong, Dou Wei, Cui Jian, Lo Ta-yu and Lisa Ono on the other. I’m also drawn to painting, visual arts, and anything that sparks creativity—including discovering new places through travel. I’m from Panzhihua, Sichuan, China, home to the Ertan Hydropower Station—one of China’s major hydroelectric dams built on the Yalong River.
-
-</section>
-
-</section>
     </div>
 
     <script src="javascripts/scale.fix.js"></script>
