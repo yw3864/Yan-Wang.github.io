@@ -47,11 +47,11 @@
         align-items: center;
       }
 
-      /* ✅ 关键修正：不要用负 margin 拉全局（会把后面的内容都抬上去） */
+      /* 两栏部分：保持你原来的设置（如本页不用 two-column，不影响） */
       .two-column {
         display: flex;
         justify-content: space-between;
-        margin-top: 0px;   /* 原来 -40px，改为 0 */
+        margin-top: -40px;
       }
 
       .two-column .column {
@@ -139,19 +139,30 @@
         display: block !important;
       }
 
-      /* ✅ 给 header 更多底部间距，让正文明显下移 */
+      /* =========================
+         关键：对齐 Projects 页的高度
+         ========================= */
+
+      /* Projects 页 header 没有 margin-bottom，所以这里也设为 0 */
       header {
-        margin-bottom: 40px;  /* 原 20px -> 40px */
+        margin-bottom: 0;
       }
 
-      /* ✅ About Me 再往下放一点（你如果还嫌高，把 40 改 60） */
+      /* About Me section 不加额外 margin-top */
       .about-me {
-        margin-top: 40px;     /* 原 10px -> 40px */
+        margin-top: 0;
       }
 
-      /* ✅ 让 About Me 标题不要贴着段落 */
+      /* 控制视觉高度：让 About Me 标题顶部不空一大块 */
       .about-me h2 {
-        margin-bottom: 10px;
+        margin-top: 0;
+        margin-bottom: 10px; /* 与 Projects 页标题风格接近 */
+        font-weight: bold;
+      }
+
+      /* （可选）段落顶部不要额外空太多 */
+      .about-me p {
+        margin-top: 0;
       }
     </style>
   </head>
@@ -173,12 +184,15 @@
           <a href="mailto:yw3864a@american.edu" target="_blank">
             <i class="fa fa-envelope-square"></i> Email
           </a>
+
           <a href="https://www.linkedin.com/in/yanwang-econ/" target="_blank">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
+
           <a href="https://scholar.google.com/citations?user=GPMFSTkAAAAJ&hl=en" target="_blank">
             <i class="ai ai-google-scholar-square"></i> Scholar
           </a>
+
           <a href="https://github.com/yw3864" target="_blank">
             <i class="fab fa-github"></i> GitHub
           </a>
@@ -194,7 +208,7 @@
 
       <!-- About Me Section -->
       <section class="about-me">
-        <h2 style="font-weight: bold;">About Me</h2>
+        <h2>About Me</h2>
         <p>
           I enjoy table tennis (a big fan of Sun Yingsha and Wang Chuqin), tennis, and music.
           My playlist often rotates between Debussy and Chopin on one side, and Faye Wong, Dou Wei, Cui Jian,
